@@ -244,7 +244,7 @@
       </div>
       <h1>
         <span class="label label-default">Default</span>
-         <a href="/campus/create" class="btn btn-lg btn-primary">Agregar Campus</a>
+        <a href="/campus/create" class="btn btn-lg btn-primary">Agregar Campus</a>
         <span class="label label-primary">Primary</span>
         <span class="label label-success">Success</span>
         <span class="label label-info">Info</span>
@@ -616,4 +616,3 @@
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
-
