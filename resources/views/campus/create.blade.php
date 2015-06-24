@@ -46,7 +46,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="/campus">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
             <li class="dropdown">
@@ -71,16 +71,19 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
         <h1>UTEM</h1>
-        <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
+        <p>Universidad Tecnológica Metropolitana</p>
+        <p>Creación de Campus</p>
       
 
       
 
 
      
-        <h1>Ingresar Datos de Campus a agregar</h1>
+        
 
       </div>
+
+      <p>Ingrese Datos de Campus a agregar</p>
       
 
       {!! Form::open(['route' => 'campus.store']) !!}
@@ -97,7 +100,7 @@
           {!! Form::text('longitud', null,['class'=>'form-control', 'placeholder'=>'Longitud'])!!}
         </div>
         <div class="form-group">
-          {!! Form::text('descripcion', null,['class'=>'form-control', 'placeholder'=>'Descripcion'])!!}
+          {!! Form::text('descripcion', null,['class'=>'form-control', 'placeholder'=>'Descripción'])!!}
         </div>
         <div class="form-group">
           {!! Form::text('rut', null,['class'=>'form-control', 'placeholder'=>'Rut encargado'])!!}
@@ -110,6 +113,26 @@
         @if(Session::has('message'))
           <div class="btn btn-success disabled{{ Session::get('class') }}">{{ Session::get('message')}}</div>
         @endif
+
+       <div class="page-header">
+        
+      </div>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+
+
+      <div class="page-header">
      
+      
   </body>
 </html>
