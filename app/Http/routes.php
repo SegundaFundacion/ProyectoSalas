@@ -25,6 +25,11 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
+
 Route::resource('administrador','Backend\AdministradorController');
 Route::resource('campus','Backend\CampusController');
 Route::resource('facultades','Backend\FacultadesController');
+
+
+
+

@@ -14,7 +14,7 @@ class CampusController extends Controller {
 	 */
 	public function index()
 	{
-		return view("campus.index")->with('campus', \App\Models\Campus::paginate(5)->setPath('campu'));
+		return view('campus.index');
 	}
 
 	/**
@@ -24,7 +24,7 @@ class CampusController extends Controller {
 	 */
 	public function create()
 	{
-		return view('campus.create');
+		//
 	}
 
 	/**
@@ -34,15 +34,7 @@ class CampusController extends Controller {
 	 */
 	public function store()
 	{
-		$campus = new \App\Models\Campus;
-		$campus->nombre = \Request::input('nombre');
-		$campus->direccion = \Request::input('direccion');
-		$campus->latitud = \Request::input('latitud');
-		$campus->longitud = \Request::input('longitud');
-		$campus->descripcion = \Request::input('descripcion');
-		$campus->rut_encargado = \Request::input('rut_encargado');
-		$campus->save();
-		return redirect()->route('campus.index')->with('message', '¡Se ha agregado el Campus!');
+		//
 	}
 
 	/**
@@ -53,11 +45,7 @@ class CampusController extends Controller {
 	 */
 	public function show($id)
 	{
-		$campus = App\Models\Campus::find($id);
-		if($campus)
-			return view('campus.show')->with('campus', $campus);
-		else
-			abort(404);
+		//
 	}
 
 	/**
@@ -68,7 +56,7 @@ class CampusController extends Controller {
 	 */
 	public function edit($id)
 	{
-		return view('campus.edit')->with('campu', \App\Models\Campus::find($id));
+		//
 	}
 
 	/**
@@ -79,15 +67,7 @@ class CampusController extends Controller {
 	 */
 	public function update($id)
 	{
-		$campus = \App\Models\Campus::find($id);
-		$campus->nombre = \Request::input('nombre');
-		$campus->direccion = \Request::input('direccion');
-		$campus->latitud = \Request::input('latitud');
-		$campus->longitud = \Request::input('longitud');
-		$campus->descripcion = \Request::input('descripcion');
-		$campus->rut_encargado = \Request::input('rut_encargado');
-		$campus->save();
-		return redirect()->route('campus.edit', ['campu' => $id])->with('message', '¡Se han hecho los cambios!');
+		//
 	}
 
 	/**
@@ -98,9 +78,7 @@ class CampusController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		$campus = \App\Models\Campus::find($id);
-		$campus->delete();
-		return redirect()->route('campus.index')->with('message', '¡Se ha eliminado exitosamente el Campus!');
+		//
 	}
 
 }
