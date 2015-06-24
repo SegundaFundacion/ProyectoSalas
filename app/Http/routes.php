@@ -25,23 +25,6 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::resource('asinaturas','Backend\AsignaturasController');
+Route::resource('administrador','Backend\AdministradorController');
 Route::resource('campus','Backend\CampusController');
-Route::resource('carreras','Backend\CarrerasController');
-Route::resource('cursos','Backend\CursosController');
-Route::resource('departamentos','Backend\DepartamentosController');
-Route::resource('docentes','Backend\DocentesController');
-Route::resource('escuelas','Backend\EscuelasController');
-Route::resource('estudiantes','Backend\EstudiantesController');
 Route::resource('facultades','Backend\FacultadesController');
-Route::resource('funcionarios','Backend\FuncionariosController');
-Route::resource('horarios','Backend\HorariosController');
-Route::resource('periodos','Backend\PeriodosController');
-Route::resource('roles','Backend\RolesController');
-Route::resource('rolesusuarios','Backend\Roles_UsuariosController');
-Route::resource('salas','Backend\SalasController');
-Route::resource('tipodesalas','Backend\Tipos_SalasController');
-
-Route::get('/admin/menu','Backend\MenuController@menuAdministrador');
-Route::get('/encargado/menu','Backend\MenuController@menuEncargado');
-
