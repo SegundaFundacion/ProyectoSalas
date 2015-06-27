@@ -14,7 +14,7 @@ class CampusController extends Controller {
 	 */
 	public function index()
 	{
-		return view('campus.index');
+		return view("campus.index")->with('campus', \App\Models\Campus::paginate(5)->setPath('campu'));
 	}
 
 	/**
@@ -34,7 +34,18 @@ class CampusController extends Controller {
 	 */
 	public function store()
 	{
-		//
+		$campus = new \App\Models\Campus;
+
+		$campus->nombre = \Request::input('nombre');
+		$campus->direccion = \Request::input('direccion');
+		$campus->latitud = \Request::input('latitud');
+		$campus->longitud = \Request::input('longitud');
+		$campus->descripcion = \Request::input('descripcion');
+		$campus->rut_encargado = \Request::input('rut');
+
+		$campus->save();
+
+		return redirect()->route('campus.index')->with('message', 'Campus Agregado');
 	}
 
 	/**
@@ -45,8 +56,9 @@ class CampusController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
-	}
+		$campus = \App\Models\Campus::find($id);
+
+		return view('campus.show')->with('campu',$campus);	}
 
 	/**
 	 * Show the form for editing the specified resource.
@@ -56,7 +68,7 @@ class CampusController extends Controller {
 	 */
 	public function edit($id)
 	{
-		return view('campus.edit');
+		return view('campus.edit')->with('campu', \App\Models\Campus::find($id));
 	}
 
 	/**
@@ -67,7 +79,17 @@ class CampusController extends Controller {
 	 */
 	public function update($id)
 	{
-		//
+		$campus = \App\Models\Campus::find($id);
+
+		$campus->nombre = \Request::input('nombre');
+		$campus->direccion = \Request::input('direccion');
+		$campus->latitud = \Request::input('latitud');
+		$campus->longitud = \Request::input('longitud');
+		$campus->descripcion = \Request::input('descripcion');
+		$campus->rut_encargado = \Request::input('rut_encargado');
+
+		$campus->save();
+		return redirect()->route('campus.index', ['campu' => $id])->with('message', 'Cambios guardados');
 	}
 
 	/**
@@ -78,7 +100,11 @@ class CampusController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		$campus = \App\Models\Campus::find($id);
+
+		$campus->delete();
+
+		return redirect()->route('campus.index')->with('message', 'Campus Eliminado con éxito');
 	}
 
 }
