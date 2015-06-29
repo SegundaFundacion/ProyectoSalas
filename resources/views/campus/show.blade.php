@@ -107,6 +107,16 @@
                                   <input class="form-control" id="disabledInput" type="text" placeholder="{{$campu->descripcion}}" disabled>
                               </div>
                               <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">Latitud: </label>
+                              <div class="col-sm-10">
+                                  <input class="form-control" id="disabledInput" type="text" placeholder="{{$campu->latitud}}" disabled>
+                              </div>
+                              <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">Longitud: </label>
+                              <div class="col-sm-10">
+                                  <input class="form-control" id="disabledInput" type="text" placeholder="{{$campu->longitud}}" disabled>
+                              </div>
+                              <br><br><br>
                               <label class="col-sm-2 col-sm-2 control-label">Encargado: </label>
                               <div class="col-sm-10">
                                   <input class="form-control" id="disabledInput" type="text" placeholder="{{$campu->rut_encargado}}" disabled>
