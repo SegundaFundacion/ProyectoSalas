@@ -72,10 +72,10 @@
       <div class="jumbotron">
         <h1>UTEM</h1>
         <p>Universidad Tecnológica Metropolitana</p>
-        <p>Mostrar Campus</p>
+        <p>Editar Campus</p>
+        </div>
 
-
-<!-- BASIC FORM ELELEMNTS -->
+        <!-- BASIC FORM ELELEMNTS -->
             <div class="row mt">
               <div class="col-lg-12">
                   <div class="form-panel">
@@ -143,6 +143,8 @@
               <td><a href="/campus" class="btn btn-default btn-sm">Volver</a></td>
 </table>
 </center>
+
+
 <div class="page-header">
         
       </div>
