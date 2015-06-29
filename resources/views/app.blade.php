@@ -67,10 +67,16 @@
     </nav>
 
     <div class="container theme-showcase" role="main">
-
+    	<div class="jumbotron">
+        <h1>UTEM</h1>
+        <p>Universidad Tecnológica Metropolitana</p>
+        </div>
       <!-- Main jumbotron for a primary marketing message or call to action -->
-      <br><br><br>
-      <img src = utem.png> 
+      <!-- <br><br><br>
+      	<center> 
+	<img src=utem.png border=0> 
+		</center> -->
+      
         
       </div>
 
