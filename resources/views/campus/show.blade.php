@@ -72,7 +72,7 @@
       <div class="jumbotron">
         <h1>UTEM</h1>
         <p>Universidad Tecnológica Metropolitana</p>
-        <p>Creación de Campus</p>
+        <p>Mostrar Campus</p>
       
 
       
