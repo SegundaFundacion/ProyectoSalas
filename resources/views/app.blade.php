@@ -69,9 +69,8 @@
     <div class="container theme-showcase" role="main">
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>UTEM</h1>
-        <p>Universidad Tecnológica Metropolitana</p>
+      <br><br><br>
+      <img src = utem.png> 
         
       </div>
 

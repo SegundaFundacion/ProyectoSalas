@@ -73,13 +73,8 @@
         <h1>UTEM</h1>
         <p>Universidad Tecnológica Metropolitana</p>
         <p>Creación de Campus</p>
-      
+        <img src = utem.png> 
 
-      
-
-
-     
-        
 
       </div>
 
