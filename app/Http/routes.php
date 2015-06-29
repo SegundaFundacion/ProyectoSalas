@@ -28,7 +28,7 @@ Route::controllers([
 
 
 Route::resource('campus','Backend\CampusController');
-
+Route::resource('facultades','Backend\FacultadesController');
 
 
 

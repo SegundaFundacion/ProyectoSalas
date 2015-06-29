@@ -65,8 +65,6 @@
       </p>
 @endsection
 
-@section('publicidad')
-
-hola que tal... 8==B
-
-@endsection
+      
+  </body>
+</html>
