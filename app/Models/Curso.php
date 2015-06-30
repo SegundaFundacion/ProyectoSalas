@@ -7,12 +7,12 @@ class Curso extends Model {
 	protected $table = 'cursos';
 	protected $fillable = ['semestre','anio','seccion','docente_id', 'asignatura_id'];
 
-    public function docentes()
+    public function docente()
     {
     	return $this->belongsTo('App\Models\Docente');
     }
 
-     public function asignaturas()
+     public function asignatura()
     {
     	return $this->belongsTo('App\Models\Asignatura');
     }
