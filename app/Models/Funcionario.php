@@ -7,7 +7,7 @@ class Funcionario extends Model {
 	protected $table = 'funcionarios';
 	protected $fillable = ['departamento_id','rut','nombre','apellidos'];
 
-    public function departamentos()
+    public function departamento()
     {
     	return $this->belongsTo('App\Models\Departamento');
     }

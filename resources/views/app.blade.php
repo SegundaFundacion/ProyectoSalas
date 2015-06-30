@@ -71,7 +71,7 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
        <br><br><br>
       	<center> 
-	<img src=../utem.png border=0> 
+	<img src=../../utem.png border=0> 
 		</center> 
 
 	@yield('content')

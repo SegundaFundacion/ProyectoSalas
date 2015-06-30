@@ -25,7 +25,7 @@
                               @foreach($departamentos as $departamento)
                               <tr>
                                   <td>{{ $departamento->nombre }}</td>
-                                  <td>{{ $departamento->facultad-> nombre }}</td>
+                                  <td>{{ $departamento->facultad->nombre}}</td>
                                   <td>{{ $departamento->descripcion }}</td>
                                   <td>{!! Html::link(route('departamentos.show', $departamento->id), 'Detalles', array('class' => 'btn btn-xs btn-success')) !!}</td>
                                   <td>{!! Html::link(route('departamentos.edit', $departamento->id), 'Editar', array('class' => 'btn btn-xs btn-primary')) !!}</td>

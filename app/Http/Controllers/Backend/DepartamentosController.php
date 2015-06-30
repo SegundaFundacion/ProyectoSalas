@@ -68,7 +68,7 @@ class DepartamentosController extends Controller {
 	public function edit($id)
 	{
 		$facultad = Facultad::lists('nombre','id');
-		return view('departamentos.edit')->with('departamento', \App\Departamento::find($id))->with('facultad',$facultad);
+		return view('departamentos.edit')->with('departamento', \App\Models\Departamento::find($id))->with('facultad',$facultad);
 	}
 
 	/**
