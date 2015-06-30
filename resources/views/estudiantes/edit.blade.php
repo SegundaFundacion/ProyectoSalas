@@ -18,11 +18,7 @@
                           <div class="form-group">
                               <label class="col-sm-2 col-sm-2 control-label">Carrera: </label>
                                 {!! Form::select('nombre', $carrera) !!}
-                              <br><br>
-                              <label class="col-sm-2 col-sm-2 control-label">Carrera: </label>
-                              <div class="col-sm-10">
-                                 {!! Form::text('carrera_id', null, ['class' => 'form-control', 'placeholder'=>'Carrera']) !!}
-                                 </div>
+                                                            
                               <br><br><br>
                               <label class="col-sm-2 col-sm-2 control-label">RUT: </label>
                               <div class="col-sm-10">

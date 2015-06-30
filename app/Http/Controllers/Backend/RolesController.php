@@ -14,7 +14,7 @@ class RolesController extends Controller {
 	 */
 	public function index()
 	{
-		return view('roles.index');
+		return view("roles.index")->with('roles', \App\Models\Rol::paginate(5)->setPath('role'));
 	}
 
 	/**
@@ -24,7 +24,7 @@ class RolesController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view('roles.create');
 	}
 
 	/**
@@ -34,7 +34,11 @@ class RolesController extends Controller {
 	 */
 	public function store()
 	{
-		//
+		$roles = new \App\Models\Rol;
+		$roles->nombre = \Request::input('nombre');
+		$roles->descripcion = \Request::input('descripcion');
+		$roles->save();
+		return redirect()->route('roles.index')->with('message', 'Rol Agregado');
 	}
 
 	/**
@@ -45,7 +49,8 @@ class RolesController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		$roles = \App\Models\Rol::find($id);
+		return view('roles.show')->with('role',$roles);
 	}
 
 	/**
@@ -56,7 +61,7 @@ class RolesController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		return view('roles.edit')->with('role', \App\Models\Rol::find($id));
 	}
 
 	/**
@@ -67,7 +72,11 @@ class RolesController extends Controller {
 	 */
 	public function update($id)
 	{
-		//
+		$roles = \App\Models\Rol::find($id);
+		$roles->nombre = \Request::input('nombre');
+		$roles->descripcion = \Request::input('descripcion');
+		$roles->save();
+		return redirect()->route('roles.index')->with('message', 'Cambios guardados');
 	}
 
 	/**
@@ -78,7 +87,9 @@ class RolesController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		$roles = \App\Models\Rol::find($id);
+		$roles->delete();
+		return redirect()->route('roles.index')->with('message', 'Rol Eliminado con éxito');
 	}
 
 }
