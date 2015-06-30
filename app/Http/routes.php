@@ -36,6 +36,7 @@ Route::resource('carreras','Backend\CarrerasController');
 Route::resource('docentes','Backend\DocentesController');
 Route::resource('estudiantes','Backend\EstudiantesController');
 Route::resource('roles','Backend\RolesController');
+Route::resource('asignaturas','Backend\AsignaturasController');
 
 
 
