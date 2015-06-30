@@ -9,7 +9,7 @@ class Campus extends Model {
 
     public function facultades()
     {
-    	return $this->hasMany('Facultad');
+    	return $this->hasMany('App\Models\Facultad');
     }
     
     public function tipos_salas()

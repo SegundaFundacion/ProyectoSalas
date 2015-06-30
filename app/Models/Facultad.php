@@ -9,12 +9,12 @@ class Facultad extends Model {
 
     public function campus()
     {
-    	return $this->belongsTo('Campus');
+    	return $this->belongsTo('App\Models\Campus');
     }
 
     public function departamentos()
     {
-    	return $this->hasMany('Departamento');
+    	return $this->hasMany('App\Models\Departamento');
     }
 
 }

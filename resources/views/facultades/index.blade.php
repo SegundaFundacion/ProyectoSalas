@@ -1,41 +1,37 @@
 @extends('app')
 
 @section('content')
-
-
-        <section id="main-content">
+<section id="main-content">
           <section class="wrapper">
               <div class="row mt">
                   <div class="col-md-12">
                       <div class="content-panel">
                           <table class="table table-striped table-advance table-hover">
                           <div class="head-table">
-                            <h4>Listado de Campus<a href="/campus/create" style="position: absolute; right: 30px" class="btn btn-default">Agregar Campus</a>
+                            <h4>Listado de Facultades<a href="/facultades/create" style="position: absolute; right: 30px" class="btn btn-default">Agregar Facultad</a>
                             </h4>
                           </div>
                             <hr>
                               <thead>
                               <tr>
                                   <th> Nombre</th>
-                                  <th> Dirección</th>
+                                  <th> Campus</th>
                                   <th> Descripción</th>
-                                  <th> Encargado</th>
                                   <th></th>
                                   <th></th>
                               </tr>
                               </thead>
                               <tbody>
-                              @foreach($campus as $campu)
+                              @foreach($facultades as $facultad)
                               <tr>
-                                  <td>{{ $campu->nombre }}</td>
-                                  <td>{{ $campu->direccion }}</td>
-                                  <td>{{ $campu->descripcion }}</td>
-                                  <td>{{ $campu->rut_encargado }}</td>
-                                  <td>{!! Html::link(route('campus.show', $campu->id), 'Detalles', array('class' => 'btn btn-xs btn-success')) !!}</td>
-                                  <td>{!! Html::link(route('campus.edit', $campu->id), 'Editar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
+                                  <td>{{ $facultad->nombre }}</td>
+                                  <td>{{ $facultad->campus-> nombre }}</td>
+                                  <td>{{ $facultad->descripcion }}</td>
+                                  <td>{!! Html::link(route('facultades.show', $facultad->id), 'Detalles', array('class' => 'label label-info')) !!}</td>
+                                  <td>{!! Html::link(route('facultades.edit', $facultad->id), 'Editar', array('class' => 'label label-success')) !!}</td>
                                   <td>
-                                        {!! Form::open(array('route' => array('campus.destroy', $campu->id), 'method' => 'DELETE')) !!}
-                                        <button class="btn btn-xs btn-danger">Eliminar</button>
+                                        {!! Form::open(array('route' => array('facultades.destroy', $facultad->id), 'method' => 'DELETE')) !!}
+                                        <button class="label label-danger">Eliminar</button>
                                         {!! Form::close() !!}
                                   </td>
                               </tr>
@@ -48,21 +44,6 @@
               </section>
               </section>
 
-      <div class="page-header">
-       
-      </div>
-      <p>
-        
-      </p>
-      <p>
-        
-      </p>
-      <p>
-        
-      </p>
-      <p>
-        
-      </p>
 @endsection
 
       
