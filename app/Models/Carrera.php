@@ -9,12 +9,12 @@ class Carrera extends Model {
 
     public function escuelas()
     {
-    	return $this->belongsTo('Escuela');
+    	return $this->belongsTo('App\Models\Escuela');
     }
 
     public function estudiantes()
     {
-    	return $this->hasMany('Estudiante');
+    	return $this->hasMany('App\Models\Estudiante');
     }
 
 }

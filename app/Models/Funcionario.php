@@ -9,7 +9,7 @@ class Funcionario extends Model {
 
     public function departamentos()
     {
-    	return $this->belongsTo('Departamento');
+    	return $this->belongsTo('App\Models\Departamento');
     }
     
 

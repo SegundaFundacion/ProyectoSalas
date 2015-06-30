@@ -27,11 +27,11 @@
                                   <td>{{ $facultad->nombre }}</td>
                                   <td>{{ $facultad->campus-> nombre }}</td>
                                   <td>{{ $facultad->descripcion }}</td>
-                                  <td>{!! Html::link(route('facultades.show', $facultad->id), 'Detalles', array('class' => 'label label-info')) !!}</td>
-                                  <td>{!! Html::link(route('facultades.edit', $facultad->id), 'Editar', array('class' => 'label label-success')) !!}</td>
+                                  <td>{!! Html::link(route('facultades.show', $facultad->id), 'Detalles', array('class' => 'btn btn-xs btn-success')) !!}</td>
+                                  <td>{!! Html::link(route('facultades.edit', $facultad->id), 'Editar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
                                   <td>
                                         {!! Form::open(array('route' => array('facultades.destroy', $facultad->id), 'method' => 'DELETE')) !!}
-                                        <button class="label label-danger">Eliminar</button>
+                                        <button class="btn btn-xs btn-danger">Eliminar</button>
                                         {!! Form::close() !!}
                                   </td>
                               </tr>

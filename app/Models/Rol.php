@@ -9,7 +9,7 @@ class Rol extends Model {
 
     public function roles_usuarios()
     {
-    	return $this->hasMany('Rol_Usuario');
+    	return $this->hasMany('App\Models\Rol_Usuario');
     }
 
 }

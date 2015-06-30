@@ -9,12 +9,12 @@ class Estudiante extends Model {
 
     public function carreras()
     {
-    	return $this->belongsTo('Carrera');
+    	return $this->belongsTo('App\Models\Carrera');
     }
 
     public function cursos()
     {
-    	return $this->belongsToMany('Curso','asignaturas_cursadas','estudiante_id','curso_id')->withTimestamps();
+    	return $this->belongsToMany('App\Models\Curso','asignaturas_cursadas','estudiante_id','curso_id')->withTimestamps();
     }
 
 }

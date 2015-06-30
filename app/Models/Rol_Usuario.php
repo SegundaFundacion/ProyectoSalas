@@ -9,6 +9,6 @@ class Rol_Usuario extends Model {
 
     public function roles()
     {
-    	return $this->belongsTo('Rol');
+    	return $this->belongsTo('App\Models\Rol');
     }
 }

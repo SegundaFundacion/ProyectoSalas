@@ -9,22 +9,22 @@ class Curso extends Model {
 
     public function docentes()
     {
-    	return $this->belongsTo('Docente');
+    	return $this->belongsTo('App\Models\Docente');
     }
 
      public function asignaturas()
     {
-    	return $this->belongsTo('Asignatura');
+    	return $this->belongsTo('App\Models\Asignatura');
     }
 
     public function estudiantes()
     {
-    	return $this->belongsToMany('Estudiante','asignaturas_cursadas','curso_id','estudiante_id')->withTimestamps();
+    	return $this->belongsToMany('App\Models\Estudiante','asignaturas_cursadas','curso_id','estudiante_id')->withTimestamps();
     }
 
     public function horarios()
     {
-    	return $this->hasMany('Horario');
+    	return $this->hasMany('App\Models\Horario');
     }
 
 }

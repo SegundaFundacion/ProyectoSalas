@@ -9,17 +9,17 @@ class Sala extends Model {
 
     public function campus()
     {
-    	return $this->belongsTo('Campus');
+    	return $this->belongsTo('App\Models\Campus');
     }
 
     public function tipos_salas()
     {
-    	return $this->belongsTo('Tipo_De_Sala');
+    	return $this->belongsTo('App\Models\Tipo_De_Sala');
     }
 
     public function horarios()
     {
-    	return $this->hasMany('Horario');
+    	return $this->hasMany('App\Models\Horario');
     }
 
 }

@@ -9,12 +9,12 @@ class Asignatura extends Model {
 
 	    public function departamentos()
 	    {
-	    	return $this->belongsTo('Departamento');
+	    	return $this->belongsTo('App\Models\Departamento');
 	    }
 	    
 	    public function docentes()
 	    {
-	    	return $this->belongsToMany('Docente','cursos','asignatura_id','docente_id')->withTimestamps();
+	    	return $this->belongsToMany('App\Models\Docente','cursos','asignatura_id','docente_id')->withTimestamps();
 	    }
 
 }

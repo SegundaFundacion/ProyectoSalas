@@ -9,7 +9,7 @@ class Periodo extends Model {
 
     public function horarios()
     {
-    	return $this->hasMany('Horario');
+    	return $this->hasMany('App\Models\Horario');
     }
 
 }

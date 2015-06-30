@@ -11,7 +11,7 @@ class Tipo_De_Sala extends Model {
     public function campus()
     {
 
-    	return $this->belongsToMany('Campus','salas','tipo_sala_id','campus_id')->withTimestamps();
+    	return $this->belongsToMany('App\Models\Campus','salas','tipo_sala_id','campus_id')->withTimestamps();
     }
 
 }
