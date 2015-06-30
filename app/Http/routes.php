@@ -31,6 +31,8 @@ Route::resource('campus','Backend\CampusController');
 Route::resource('facultades','Backend\FacultadesController');
 Route::resource('departamentos','Backend\DepartamentosController');
 Route::resource('funcionarios','Backend\FuncionariosController');
+Route::resource('escuelas','Backend\EscuelasController');
+Route::resource('carreras','Backend\CarrerasController');
 
 
 
