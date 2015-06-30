@@ -38,7 +38,7 @@
 <br>
 <table>
               <td><a href="/escuelas" class="btn btn-default btn-sm">Volver</a>
-                {!! Html::link(route('escuelas.edit', $escuela->id), 'Editar', array('class' => 'btn btn-warning btn-sm')) !!}</td>
+                {!! Html::link(route('escuelas.edit', $escuela->id), 'Editar', array('class' => 'btn btn-sm btn-primary')) !!}</td>
 </table>
 </center>
     </section>
