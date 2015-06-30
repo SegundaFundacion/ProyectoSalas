@@ -2,56 +2,78 @@
 
 @section('content')
 
-      <section id="main-content">
+       <section id="main-content">
           <section class="wrapper">
           <br>
-            <h3> Detalle de la Facultad</h3>
+            <h3> Detalle del Campus</h3>
             
             <!-- BASIC FORM ELELEMNTS -->
             <div class="row mt">
               <div class="col-lg-12">
                   <div class="form-panel">
-                      <h4 class="mb">Edite la información de la Facultad "{{$facultad->nombre}}" </h4>
-                      {!! Form::model($facultad, ['route' => ['facultades.update', $facultad->id], 'method' => 'patch']) 
-                      !!}
+                      <h4 class="mb">Información del campus "{{$campu->nombre}}" </h4>
                       <form class="form-horizontal style-form" method="get">
                           <div class="form-group">
                               <label class="col-sm-2 col-sm-2 control-label">Nombre: </label>
                               <div class="col-sm-10">
-                                 {!! Form::text('nombre', null, ['class' => 'form-control', 'placeholder'=>'Nombre']) !!}
+                                  <input class="form-control" id="disabledInput" type="text" placeholder="{{$campu->nombre}}" disabled>
                               </div>
                               <br><br><br>
-                              <label class="col-sm-2 col-sm-2 control-label">Campus: </label>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!! Form::select('campus_id', $campus) !!}
-                </div>
+                              <label class="col-sm-2 col-sm-2 control-label">Dirección: </label>
+                              <div class="col-sm-10">
+                                  <input class="form-control" id="disabledInput" type="text" placeholder="{{$campu->direccion}}" disabled>
+                              </div>
+
+                              <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">Latitud: </label>
+                              <div class="col-sm-10">
+                                  <input class="form-control" id="disabledInput" type="text" placeholder="{{$campu->latitud}}" disabled>
+                              </div>
+
+                              <br><br><br>
+                              <label class="col-sm-2 col-sm-2 control-label">Longitud: </label>
+                              <div class="col-sm-10">
+                                  <input class="form-control" id="disabledInput" type="text" placeholder="{{$campu->longitud}}" disabled>
+                              </div>
+                              <br><br><br>
                               <label class="col-sm-2 col-sm-2 control-label">Descripción: </label>
                               <div class="col-sm-10">
-                                  {!! Form::text('descripcion', null, ['class' => 'form-control', 'placeholder'=>'Descripción']) !!}
+                                  <input class="form-control" id="disabledInput" type="text" placeholder="{{$campu->descripcion}}" disabled>
                               </div>
                               <br><br><br>
-                                {!! Form::submit('Actualizar', ["class" => "btn btn-success btn-block"]) !!}
+                              <label class="col-sm-2 col-sm-2 control-label">Encargado: </label>
+                              <div class="col-sm-10">
+                                  <input class="form-control" id="disabledInput" type="text" placeholder="{{$campu->rut_encargado}}" disabled>
+                              </div>
                           </div>
+                          
                       </form>
-                      {!! Form::close() !!}
-                      <p>
-              @if(Session::has('message'))
-                  <div class="btn btn-success disabled{{ Session::get('class') }}">{{ Session::get('message')}}</div>
-                @endif
-                </p>
                   </div>
               </div><!-- col-lg-12-->       
             </div><!-- /row -->  
-<center>
+            <script>
+  $(document).ready(function(){
+   var url =GMaps.staticMapURL({
+     size: [610, 350],
+     lat:{{$campu->latitud}},
+     lng:{{$campu->longitud}},
+     markers: [
+      {lat:{{$campu->latitud}}, lng:{{$campu->longitud}}, color:'blue'}
+     ]
+   });
+  $('<img/>').attr('src', url).appendTo('#map');
+  });
+  </script>
+<center><div id="map"></div>
 <br>
 <table>
-              <td><a href="/facultades" class="btn btn-default btn-sm">Volver</a></td>
+              <td><a href="/campus" class="btn btn-default btn-sm">Volver</a>
+                {!! Html::link(route('campus.edit', $campu->id), 'Editar', array('class' => 'btn btn-sm btn-primary')) !!}</td>
 </table>
 </center>
     </section>
       </section>
-
-
-       <div class="page-header">
+      <div class="page-header">
         
       </div>
       <p>
