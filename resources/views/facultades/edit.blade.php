@@ -22,7 +22,7 @@
                               </div>
                               <br><br><br>
                               <label class="col-sm-2 col-sm-2 control-label">Campus: </label>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!! Form::select('campus_id', $campus) !!}
+                              {!! Form::select('campus_id', $campus) !!}
                 </div>
                               <label class="col-sm-2 col-sm-2 control-label">Descripción: </label>
                               <div class="col-sm-10">

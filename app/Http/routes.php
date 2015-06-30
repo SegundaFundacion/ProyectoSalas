@@ -33,6 +33,7 @@ Route::resource('departamentos','Backend\DepartamentosController');
 Route::resource('funcionarios','Backend\FuncionariosController');
 Route::resource('escuelas','Backend\EscuelasController');
 Route::resource('carreras','Backend\CarrerasController');
+Route::resource('docentes','Backend\DocentesController');
 
 
 

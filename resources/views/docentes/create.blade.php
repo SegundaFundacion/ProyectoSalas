@@ -1,27 +1,29 @@
 @extends('app')
 
 @section('content')
-      
       <section id="main-content">
           <section class="wrapper">
           <br>
-            <h3> Registrar Facultad</h3>
+            <h3> Registrar Docente</h3>
             
             <!-- BASIC FORM ELELEMNTS -->
             <div class="row mt">
               <div class="col-lg-12">
                   <div class="form-panel">
-                      <h4 class="mb">Ingrese la información de la Facultad</h4>
-                      {!! Form::open(['route' => 'facultades.store']) !!}
+                      <h4 class="mb">Ingrese la información del Docente</h4>
+                      {!! Form::open(['route' => 'docentes.store']) !!}
                       <form class="form-horizontal style-form" method="get">
-              <div class="form-group">
-                {!! Form::text('nombre', null, ['class' => 'form-control', 'placeholder'=>'Nombre']) !!}
-              </div>
-              <div class="form-group"><p>Seleccione Campus:
-                {!! Form::select('campus_id', $campus, ['class' => 'form-control']) !!}<p>
+                          <div class="form-group"><p>Departamento:
+                {!! Form::select('departamento_id', $departamento, ['class' => 'form-control']) !!}<p>
               </div>
               <div class="form-group">
-                {!! Form::text('descripcion', null,['class'=>'form-control', 'placeholder'=>'Descripción'])!!}
+                {!! Form::text('rut', null, ['class' => 'form-control', 'placeholder'=>'RUT']) !!}
+              </div>
+              <div class="form-group">
+                {!! Form::text('nombres', null,['class'=>'form-control', 'placeholder'=>'Nombres'])!!}
+              </div>
+              <div class="form-group">
+                {!! Form::text('apellidos', null,['class'=>'form-control', 'placeholder'=>'Apellidos'])!!}
               </div>
               <div class="form-group">
                 {!! Form::submit('Send', ["class" => "btn btn-success btn-block"]) !!}
@@ -42,6 +44,24 @@
 </center>
     </section>
       </section>
+      <div class="page-header">
+        
+      </div>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+
+
+      <div class="page-header">
       @endsection
   </body>
 </html>

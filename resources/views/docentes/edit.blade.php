@@ -2,24 +2,23 @@
 
 @section('content')
 
-        <section id="main-content">
-          <section class="wrapper">
-          <br>
-            <h3> Detalle del Funcionario</h3>
-            
-            <!-- BASIC FORM ELELEMNTS -->
+        <!-- BASIC FORM ELELEMNTS -->
             <div class="row mt">
               <div class="col-lg-12">
                   <div class="form-panel">
-                      <h4 class="mb">Edite la información del Funcionario "{{$funcionario->nombres}} {{$funcionario->apellidos}}" </h4>
-                      {!! Form::model($funcionario, ['route' => ['funcionarios.update', $funcionario->id], 'method' => 'patch']) 
+                      <h4 class="mb">Edite la información del Docente "{{$docente->nombres}} {{$docente->apellidos}}" </h4>
+                      {!! Form::model($docente, ['route' => ['docentes.update', $docente->id], 'method' => 'patch']) 
                       !!}
                       <form class="form-horizontal style-form" method="get">
                           <div class="form-group">
                               <label class="col-sm-2 col-sm-2 control-label">Departamento: </label>
-                              {!! Form::select('departamento_id', $departamento) !!}
+                                {!! Form::select('nombre', $departamento) !!}
                               <br><br>
-                              
+                              <label class="col-sm-2 col-sm-2 control-label">Departamento: </label>
+                              <div class="col-sm-10">
+                               {!! Form::text('departamento_id', null, ['class' => 'form-control', 'placeholder'=>'Departamento']) !!}
+                              </div>
+                              <br><br><br>
                               <label class="col-sm-2 col-sm-2 control-label">RUT: </label>
                               <div class="col-sm-10">
                                  {!! Form::text('rut', null, ['class' => 'form-control', 'placeholder'=>'RUT']) !!}
@@ -50,7 +49,7 @@
 <center>
 <br>
 <table>
-              <td><a href="/funcionarios" class="btn btn-default btn-sm">Volver</a></td>
+              <td><a href="/docentes" class="btn btn-default btn-sm">Volver</a></td>
 </table>
 </center>
     </section>
