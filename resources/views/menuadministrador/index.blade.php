@@ -7,15 +7,14 @@
                   <div class="col-md-12">
                       <div class="content-panel">
                       <center>
-                          <a href="/menuadmin"  class="btn btn-lg btn-primary">Administrador</a>
-                          <a href="/home"  class="btn btn-lg btn-success">Encargado</a>
-                          <a href="/campus"  class="btn btn-lg btn-primary">Docente</a>
-                          <a href="/campus"  class="btn btn-lg btn-success">Estudiante</a>
-                          <a href="/menuadmin"  class="btn btn-lg btn-primary">Administrador</a>
-                          <a href="/home"  class="btn btn-lg btn-success">Encargado</a>
-                          <a href="/campus"  class="btn btn-lg btn-primary">Docente</a>
-                          <a href="/campus"  class="btn btn-lg btn-success">Estudiante</a>
-                          <a href="/campus"  class="btn btn-lg btn-primary">Estudiante</a>
+                          <a href="/campus"  class="btn btn-lg btn-primary">Campus</a>
+                          <a href="/facultades"  class="btn btn-lg btn-success">Facultades</a>
+                          <a href="/departamentos"  class="btn btn-lg btn-primary">Departamentos</a>
+                          <a href="/escuelas"  class="btn btn-lg btn-success">Escuelas</a>
+                          <a href="/carreras"  class="btn btn-lg btn-primary">Carreras</a>
+                          <a href="/docentes"  class="btn btn-lg btn-success">Docentes</a>
+                          <a href="/estudiantes"  class="btn btn-lg btn-primary">Estudiantes</a>
+                          <a href="/roles"  class="btn btn-lg btn-success">Roles</a>
                       </center>
         
         
