@@ -25,8 +25,8 @@
                               @foreach($periodos as $periodo)
                               <tr>
                                   <td>{{ $periodo->bloque }}</td>
-                                  <td>{{ $periodo->inicio_time }}</td>
-                                  <td>{{ $periodo->fin_time }}</td>
+                                  <td>{{ $periodo->inicio }}</td>
+                                  <td>{{ $periodo->fin }}</td>
                                   <td>{!! Html::link(route('periodos.show', $periodo->id), 'Detalles', array('class' => 'btn btn-xs btn-success')) !!}</td>
                                   <td>{!! Html::link(route('periodos.edit', $periodo->id), 'Editar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
                                   <td>
