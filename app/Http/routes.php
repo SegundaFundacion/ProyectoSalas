@@ -42,6 +42,7 @@ Route::resource('periodos','Backend\PeriodosController');
 Route::resource('rolesusuarios','Backend\RolesusuariosController');
 Route::resource('tiposdesalas','Backend\TiposdesalasController');
 Route::resource('salas','Backend\SalasController');
+Route::resource('horarios','Backend\HorariosController');
 
 
 
