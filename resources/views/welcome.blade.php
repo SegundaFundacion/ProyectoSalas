@@ -13,8 +13,8 @@
                   <div class="col-md-12">
                       <div class="content-panel">
                       <center>
-                          <a href="/campus"  class="btn btn-lg btn-primary">Administrador</a>
-                          <a href="/campus"  class="btn btn-lg btn-success">Encargado</a>
+                          <a href="/menuadmin"  class="btn btn-lg btn-primary">Administrador</a>
+                          <a href="/home"  class="btn btn-lg btn-success">Encargado</a>
                           <a href="/campus"  class="btn btn-lg btn-primary">Docente</a>
                           <a href="/campus"  class="btn btn-lg btn-success">Estudiante</a>
                       </center>

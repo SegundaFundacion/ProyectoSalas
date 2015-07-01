@@ -43,6 +43,7 @@ Route::resource('rolesusuarios','Backend\RolesusuariosController');
 Route::resource('tiposdesalas','Backend\TiposdesalasController');
 Route::resource('salas','Backend\SalasController');
 Route::resource('horarios','Backend\HorariosController');
+Route::get('menuadmin', 'Backend\MenuAdministradorController@index');
 
 
 
