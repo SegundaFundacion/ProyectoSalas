@@ -6,8 +6,7 @@
           <section class="wrapper">
           <br>
           <h2>HORARIO</h2></td>
-      <td><a href="/horarios" class="btn btn-default btn-sm">Volver</a>
-          {!! Html::link(route('horarios.edit', $horario->id), 'Editar', array('class' => 'btn btn-warning btn-sm')) !!}</td>
+      
   </table>
 </p>
 <h4>Información del horario "{{$horario->fecha}}" </h4>
@@ -38,4 +37,7 @@
           @endif
       </tbody>
   </table>
+
+  <center><td><a href="/horarios" class="btn btn-default btn-sm">Volver</a>
+          {!! Html::link(route('horarios.edit', $horario->id), 'Modificar', array('class' => 'btn btn-sm btn-primary')) !!}</td></center>
 @stop

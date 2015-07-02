@@ -27,7 +27,7 @@
                                   <td>{{ $tiposdesala->nombre }}</td>
                                   <td>{{ $tiposdesala->descripcion }}</td>
                                   <td>{!! Html::link(route('tiposdesalas.show', $tiposdesala->id), 'Detalles', array('class' => 'btn btn-xs btn-success')) !!}</td>
-                                  <td>{!! Html::link(route('tiposdesalas.edit', $tiposdesala->id), 'Editar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
+                                  <td>{!! Html::link(route('tiposdesalas.edit', $tiposdesala->id), 'Modificar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
                                   <td>
                                         {!! Form::open(array('route' => array('tiposdesalas.destroy', $tiposdesala->id), 'method' => 'DELETE')) !!}
                                         <button class="btn btn-xs btn-danger">Eliminar</button>

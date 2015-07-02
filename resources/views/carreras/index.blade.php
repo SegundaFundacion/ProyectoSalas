@@ -30,7 +30,7 @@
                                   <td>{{ $carrera->nombre }}</td>
                                   <td>{{ $carrera->descripcion }}</td>
                                   <td>{!! Html::link(route('carreras.show', $carrera->id), 'Detalles', array('class' => 'btn btn-xs btn-success')) !!}</td>
-                                  <td>{!! Html::link(route('carreras.edit', $carrera->id), 'Editar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
+                                  <td>{!! Html::link(route('carreras.edit', $carrera->id), 'Modificar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
                                   <td>
                                         {!! Form::open(array('route' => array('carreras.destroy', $carrera->id), 'method' => 'DELETE')) !!}
                                         <button class="btn btn-xs btn-danger">Eliminar</button>

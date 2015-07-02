@@ -32,7 +32,7 @@
                                   <td>{{ $estudiante->apellidos }}</td>
                                   <td>{{ $estudiante->email }}</td>
                                   <td>{!! Html::link(route('estudiantes.show', $estudiante->id), 'Detalles', array('class' => 'btn btn-xs btn-success')) !!}</td>
-                                  <td>{!! Html::link(route('estudiantes.edit', $estudiante->id), 'Editar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
+                                  <td>{!! Html::link(route('estudiantes.edit', $estudiante->id), 'Modificar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
                                   <td>
                                         {!! Form::open(array('route' => array('estudiantes.destroy', $estudiante->id), 'method' => 'DELETE')) !!}
                                         <button class="btn btn-xs btn-danger">Eliminar</button>

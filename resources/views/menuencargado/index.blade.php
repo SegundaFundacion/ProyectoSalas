@@ -1,6 +1,9 @@
 @extends('app')
 @section('content')
 <br><br><br>
+<div class="jumbotron">
+        <p> <CENTER> <strong>Bienvenido al menu del encargado.</strong></CENTER> </p>
+      </div>
 <section id="main-content">
           <section class="wrapper">
               <div class="row mt">

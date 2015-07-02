@@ -5,7 +5,7 @@
 <br><br><br>
 
 <div class="jumbotron">
-        <p> <CENTER> <strong>Bienvenidos al sistema web "Gestion de Salas".</strong></CENTER> </p>
+        <p> <CENTER> <strong>Bienvenido al sistema web "Gestion de Salas".</strong></CENTER> </p>
       </div>
 <section id="main-content">
           <section class="wrapper">

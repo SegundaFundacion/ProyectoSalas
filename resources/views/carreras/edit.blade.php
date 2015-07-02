@@ -35,7 +35,7 @@
                                   {!! Form::text('descripcion', null, ['class' => 'form-control', 'placeholder'=>'Descripción']) !!}
                               </div>
                               <br><br><br>
-                                {!! Form::submit('Actualizar', ["class" => "btn btn-success btn-block"]) !!}
+                                {!! Form::submit('Modificar', ["class" => "btn btn-success btn-block"]) !!}
                           </div>
                       </form>
                       {!! Form::close() !!}

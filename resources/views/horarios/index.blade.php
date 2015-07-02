@@ -23,7 +23,7 @@
       <td width=450>{{ $horario->fecha }}</td>
       <td>
         {!! Html::link(route('horarios.show', $horario->id), 'Detalles', array('class' => 'label label-info')) !!}
-        {!! Html::link(route('horarios.edit', $horario->id), 'Editar', array('class' => 'label label-success')) !!}
+        {!! Html::link(route('horarios.edit', $horario->id), 'Modificar', array('class' => 'label label-success')) !!}
         <td>
           {!! Form::open(array('route' => array('horarios.destroy', $horario->id), 'method' => 'DELETE')) !!}
             <button class="label label-danger">Eliminar</button>

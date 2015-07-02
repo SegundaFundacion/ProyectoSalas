@@ -40,7 +40,7 @@
                                   {!! Form::text('rut_encargado', null, ['class' => 'form-control', 'placeholder'=>'RUT Encargado']) !!}
                               </div>
                               <br><br><br>
-                                {!! Form::submit('Actualizar', ["class" => "btn btn-success btn-block"]) !!}
+                                {!! Form::submit('Modificar', ["class" => "btn btn-success btn-block"]) !!}
                           </div>
                       </form>
                       {!! Form::close() !!}

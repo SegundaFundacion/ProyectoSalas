@@ -27,7 +27,7 @@
         {!! Form::text('curso_id', null,['class'=>'form-control', 'placeholder'=>'Curso'])!!}
       </div>
       <div class="form-group">
-        {!! Form::submit('Send', ["class" => "btn btn-success btn-block"]) !!}
+        {!! Form::submit('Modificar', ["class" => "btn btn-success btn-block"]) !!}
       </div>
       {!! Form::close() !!}
       <p>

@@ -26,7 +26,7 @@
       {!! Form::select('departamento_id', $departamentos) !!}
       </div>
       <div class="form-group">
-        {!! Form::submit('Actualizar', ["class" => "btn btn-success btn-block"]) !!}
+        {!! Form::submit('Modificar', ["class" => "btn btn-success btn-block"]) !!}
       </div>
       {!! Form::close() !!}
       <p>

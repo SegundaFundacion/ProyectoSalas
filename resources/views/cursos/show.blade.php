@@ -35,6 +35,6 @@
   </table>
 
   <center><td><a href="/cursos" class="btn btn-default btn-sm">Volver</a>
-          {!! Html::link(route('cursos.edit', $curso->id), 'Editar', array('class' => 'btn btn-sm btn-primary')) !!}</td>
+          {!! Html::link(route('cursos.edit', $curso->id), 'Modificar', array('class' => 'btn btn-sm btn-primary')) !!}</td>
   </table></center>
 @stop

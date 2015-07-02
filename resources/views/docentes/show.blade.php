@@ -43,7 +43,7 @@
 <br>
 <table>
               <td><a href="/docentes" class="btn btn-default btn-sm">Volver</a>
-                {!! Html::link(route('docentes.edit', $docente->id), 'Editar', array('class' => 'btn btn-sm btn-primary')) !!}</td>
+                {!! Html::link(route('docentes.edit', $docente->id), 'Modificar', array('class' => 'btn btn-sm btn-primary')) !!}</td>
 </table>
 </center>
     </section>

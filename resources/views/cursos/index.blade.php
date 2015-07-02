@@ -29,7 +29,7 @@
                                   <td>{{ $curso->seccion }}</td>
                                   <td>{{ $curso->docente->nombres }}</td>
                                   <td>{!! Html::link(route('cursos.show', $curso->id), 'Detalles', array('class' => 'btn btn-xs btn-success')) !!}</td>
-                                  <td>{!! Html::link(route('cursos.edit', $curso->id), 'Editar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
+                                  <td>{!! Html::link(route('cursos.edit', $curso->id), 'Modificar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
                                   <td>
                                         {!! Form::open(array('route' => array('cursos.destroy', $curso->id), 'method' => 'DELETE')) !!}
                                         <button class="btn btn-xs btn-danger">Eliminar</button>

@@ -28,7 +28,7 @@
                               <td>{{ $sala->descripcion }}</td>
       <td>
         <td>{!! Html::link(route('salas.show', $sala->id), 'Detalles', array('class' => 'btn btn-xs btn-success')) !!}</td>
-        <td>{!! Html::link(route('salas.edit', $sala->id), 'Editar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
+        <td>{!! Html::link(route('salas.edit', $sala->id), 'Modificar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
         <td>
           {!! Form::open(array('route' => array('salas.destroy', $sala->id), 'method' => 'DELETE')) !!}
             <button class="btn btn-xs btn-danger">Eliminar</button>

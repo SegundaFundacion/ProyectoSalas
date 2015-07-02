@@ -28,7 +28,7 @@
                                   <td>{{ $periodo->inicio }}</td>
                                   <td>{{ $periodo->fin }}</td>
                                   <td>{!! Html::link(route('periodos.show', $periodo->id), 'Detalles', array('class' => 'btn btn-xs btn-success')) !!}</td>
-                                  <td>{!! Html::link(route('periodos.edit', $periodo->id), 'Editar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
+                                  <td>{!! Html::link(route('periodos.edit', $periodo->id), 'Modificar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
                                   <td>
                                         {!! Form::open(array('route' => array('periodos.destroy', $periodo->id), 'method' => 'DELETE')) !!}
                                         <button class="btn btn-xs btn-danger">Eliminar</button>

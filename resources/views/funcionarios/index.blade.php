@@ -30,7 +30,7 @@
                                   <td>{{ $funcionario->nombres }}</td>
                                   <td>{{ $funcionario->apellidos }}</td>
                                   <td>{!! Html::link(route('funcionarios.show', $funcionario->id), 'Detalles', array('class' => 'btn btn-xs btn-success')) !!}</td>
-                                  <td>{!! Html::link(route('funcionarios.edit', $funcionario->id), 'Editar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
+                                  <td>{!! Html::link(route('funcionarios.edit', $funcionario->id), 'Modificar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
                                   <td>
                                         {!! Form::open(array('route' => array('funcionarios.destroy', $funcionario->id), 'method' => 'DELETE')) !!}
                                         <button class="btn btn-xs btn-danger">Eliminar</button>

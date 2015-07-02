@@ -35,7 +35,7 @@
 <br>
 <table>
               <td><a href="/funcionarios" class="btn btn-default btn-sm">Volver</a>
-                {!! Html::link(route('roles.edit', $role->id), 'Editar', array('class' => 'btn btn-sm btn-primary')) !!}</td>
+                {!! Html::link(route('roles.edit', $role->id), 'Modificar', array('class' => 'btn btn-sm btn-primary')) !!}</td>
 </table>
 </center>
     </section>

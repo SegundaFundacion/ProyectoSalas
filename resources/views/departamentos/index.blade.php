@@ -28,7 +28,7 @@
                                   <td>{{ $departamento->facultad->nombre}}</td>
                                   <td>{{ $departamento->descripcion }}</td>
                                   <td>{!! Html::link(route('departamentos.show', $departamento->id), 'Detalles', array('class' => 'btn btn-xs btn-success')) !!}</td>
-                                  <td>{!! Html::link(route('departamentos.edit', $departamento->id), 'Editar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
+                                  <td>{!! Html::link(route('departamentos.edit', $departamento->id), 'Modificar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
                                   <td>
                                         {!! Form::open(array('route' => array('departamentos.destroy', $departamento->id), 'method' => 'DELETE')) !!}
                                         <button class="btn btn-xs btn-danger">Eliminar</button>

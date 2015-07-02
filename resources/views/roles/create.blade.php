@@ -23,7 +23,7 @@
           {!! Form::text('descripcion', null,['class'=>'form-control', 'placeholder'=>'Descripcion'])!!}
         </div>
         <div class="form-group">
-          {!! Form::submit('Send', ["class" => "btn btn-success btn-block"]) !!}
+          {!! Form::submit('Enviar', ["class" => "btn btn-success btn-block"]) !!}
         </div>
       {!! Form::close() !!}
       <p>

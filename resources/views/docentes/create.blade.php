@@ -26,7 +26,7 @@
                 {!! Form::text('apellidos', null,['class'=>'form-control', 'placeholder'=>'Apellidos'])!!}
               </div>
               <div class="form-group">
-                {!! Form::submit('Send', ["class" => "btn btn-success btn-block"]) !!}
+                {!! Form::submit('Enviar', ["class" => "btn btn-success btn-block"]) !!}
               </div>
           </form>
               {!! Form::close() !!}
