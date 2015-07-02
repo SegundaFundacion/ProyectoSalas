@@ -40,7 +40,7 @@
   @endif
 </p>
 <table>
-  <td width= 505><a href="/encargado/menu" class="btn btn-danger btn-xs">Cerrar</a></td>
+  <td width= 505><a href="/menuencar" class="btn btn-danger btn-xs">Cerrar</a></td>
     <div class="col-md-12">
 </table>
 @stop

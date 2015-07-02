@@ -47,10 +47,6 @@ Route::get('menuadmin', 'Backend\MenuAdministradorController@index');
 Route::get('menuencar', 'Backend\MenuEncargadoController@index');
 Route::get('menudocen', 'Backend\MenuDocenteController@index');
 Route::get('menuestudi', 'Backend\MenuEstudianteController@index');
-Route::get('menuadmin', 'Backend\MenuAdministradorController@index');
-Route::get('menuencar', 'Backend\MenuEncargadoController@index');
-Route::get('menudocen', 'Backend\MenuDocenteController@index');
-Route::get('menuestudi', 'Backend\MenuEstudianteController@index');
 
 
 
