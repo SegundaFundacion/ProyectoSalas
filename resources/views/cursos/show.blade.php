@@ -6,8 +6,7 @@
           <section class="wrapper">
           <br>
             <h3> Detalle Cursos</h3>
-            <td><a href="/cursos" class="btn btn-default btn-sm">Volver</a>
-          {!! Html::link(route('cursos.edit', $curso->id), 'Editar', array('class' => 'btn btn-warning btn-sm')) !!}</td>
+            
   </table>
 </p>
 <h4>Información del curso "{{$asignaturas->nombre}} ({{$curso->seccion }})" </h4>
@@ -34,4 +33,8 @@
           @endif
       </tbody>
   </table>
+
+  <center><td><a href="/cursos" class="btn btn-default btn-sm">Volver</a>
+          {!! Html::link(route('cursos.edit', $curso->id), 'Editar', array('class' => 'btn btn-sm btn-primary')) !!}</td>
+  </table></center>
 @stop

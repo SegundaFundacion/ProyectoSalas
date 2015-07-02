@@ -6,8 +6,7 @@
           <section class="wrapper">
           <br>
             <h3> Registro Asignaturas</h3>
-                <td><a href="/asignaturas" class="btn btn-default btn-sm">Volver</a>
-    <a href="/asignaturas/create" class="btn btn-warning btn-sm">Agregar asignatura</a></td>
+                
 </table>
 </p>
   <h4>Actualizar datos de la Asignatura "{{$asignatura->nombre}}"</h4>
@@ -27,7 +26,7 @@
       {!! Form::select('departamento_id', $departamentos) !!}
       </div>
       <div class="form-group">
-        {!! Form::submit('Send', ["class" => "btn btn-success btn-block"]) !!}
+        {!! Form::submit('Actualizar', ["class" => "btn btn-success btn-block"]) !!}
       </div>
       {!! Form::close() !!}
       <p>
@@ -35,4 +34,10 @@
           <div class="btn btn-success disabled{{ Session::get('class') }}">{{ Session::get('message')}}</div>
         @endif
       </p>
-@stop
+
+
+<br>
+<center>
+      <td><a href="/asignaturas" class="btn btn-default btn-sm">Volver</a>
+    </center>
+@endsection

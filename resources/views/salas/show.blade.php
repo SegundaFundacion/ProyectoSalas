@@ -4,8 +4,7 @@
 
       <table>
     <td width=505><h2>Registro de Salas</h2></td>
-    <td><a href="/salas" class="btn btn-default btn-sm">Volver</a>
-    {!! Html::link(route('salas.edit', $sala->id), 'Editar', array('class' => 'btn btn-warning btn-sm')) !!}</td>
+    
   </table>
 </p>
 <h4>Información de la sala "{{$sala->nombre}}" </h4>
@@ -36,4 +35,6 @@
           @endif
       </tbody>
   </table>
+  <center><td><a href="/salas" class="btn btn-default btn-sm">Volver</a>
+    {!! Html::link(route('salas.edit', $sala->id), 'Editar', array('class' => 'btn btn-sm btn-primary')) !!}</td></center>
 @stop

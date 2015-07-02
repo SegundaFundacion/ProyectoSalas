@@ -7,8 +7,7 @@
           <br>
             <h3> Registro Cursos</h3>
             
-            <td><a href="/cursos" class="btn btn-default btn-sm">Volver</a>
-    <td><a href="/cursos/create" class="btn btn-warning btn-sm">Agregar curso</a></td>
+
   </table>
 </p>
 <h4>Nuevo curso</h4>

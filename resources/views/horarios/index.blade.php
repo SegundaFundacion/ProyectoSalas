@@ -11,7 +11,7 @@
                                  <h2>Horarios</h2>
     </td>
     <td>
-      <a href="/horarios/create" class="btn btn-warning btn-sm">Agregar horarios</a>
+      <h4>Lista de Horarios<a href="/horarios/create" style="position: absolute; right: 30px" class="btn btn-default">Agregar Horario</a>
     </td>
   </table>
 </p>
@@ -39,8 +39,5 @@
     <div class="btn btn-info disabled{{ Session::get('class') }}">{{ Session::get('message')}}</div>
   @endif
 </p>
-<table>
-  <td width= 505><a href="/menuencar" class="btn btn-danger btn-xs">Cerrar</a></td>
-    <div class="col-md-12">
-</table>
+
 @stop

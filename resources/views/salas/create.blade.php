@@ -4,8 +4,7 @@
       
       <table>
     <td width=505><h2>Registro de Salas</h2></td>
-    <td><a href="/salas" class="btn btn-default btn-sm">Volver</a>
-    <td><a href="/salas/create" class="btn btn-warning btn-sm">Agregar Sala</a></td>
+
   </table>
 </p>
 <h4>Nueva Sala</h4>

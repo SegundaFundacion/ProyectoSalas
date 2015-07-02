@@ -30,7 +30,7 @@
                 {!! Form::text('email', null,['class'=>'form-control', 'placeholder'=>'E-mail'])!!}
               </div>
               <div class="form-group">
-                {!! Form::submit('Registrar', ["class" => "btn btn-success btn-block"]) !!}
+                {!! Form::submit('Send', ["class" => "btn btn-success btn-block"]) !!}
               </div>
           </form>
               {!! Form::close() !!}

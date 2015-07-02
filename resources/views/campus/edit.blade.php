@@ -51,20 +51,11 @@
                   </div>
               </div><!-- col-lg-12-->       
             </div><!-- /row -->  
-            <script>
-  $(document).ready(function(){
-   var url =GMaps.staticMapURL({
-     size: [610, 350],
-     lat:{{$campu->latitud}},
-     lng:{{$campu->longitud}},
-     markers: [
-      {lat:{{$campu->latitud}}, lng:{{$campu->longitud}}, color:'blue'}
-     ]
-   });
-  $('<img/>').attr('src', url).appendTo('#map');
-  });
-  </script>
-<center><div id="map"></div>
+         
+
+            <center>
+
+
 <br>
 <table>
               <td><a href="/campus" class="btn btn-default btn-sm">Volver</a></td>

@@ -4,8 +4,8 @@
 
         <table>
     <td width=505><h2>Registro de Salas</h2></td>
-    <td><a href="/salas" class="btn btn-default btn-sm">Volver</a>
-    <td><a href="/salas/create" class="btn btn-warning btn-sm">Agregar Sala</a></td>
+    
+    
   </table>
 </p>
 <h4>Actualizar datos de la Sala "{{$sala->nombre}}"</h4>
@@ -25,12 +25,15 @@
           {!! Form::text('descripcion', null,['class'=>'form-control', 'placeholder'=>'Descripción'])!!}
         </div>
       <div class="form-group">
-        {!! Form::submit('Send', ["class" => "btn btn-success btn-block"]) !!}
+        {!! Form::submit('Actualizar', ["class" => "btn btn-success btn-block"]) !!}
       </div>
       {!! Form::close() !!}
       <p>
         @if(Session::has('message'))
           <div class="btn btn-success disabled{{ Session::get('class') }}">{{ Session::get('message')}}</div>
         @endif
+
       </p>
+       <center><td><a href="/salas" class="btn btn-default btn-sm">Volver</a></center>
+
 @stop

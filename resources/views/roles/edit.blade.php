@@ -22,7 +22,7 @@
         {!! Form::text('descripcion', null,['class'=>'form-control', 'placeholder'=>'Descripcion'])!!}
       </div>
       <div class="form-group">
-        {!! Form::submit('Send', ["class" => "btn btn-success btn-block"]) !!}
+        {!! Form::submit('Actualizar', ["class" => "btn btn-success btn-block"]) !!}
       </div>
       {!! Form::close() !!}
       <p>
@@ -34,6 +34,8 @@
               </div><!-- col-lg-12-->       
             </div><!-- /row -->  
 <center>
+
+
 <br>
 <table>
               <td><a href="/roles" class="btn btn-default btn-sm">Volver</a></td>

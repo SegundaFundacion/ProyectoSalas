@@ -4,8 +4,7 @@
 
      <table>
      <td width=505><h2>Periodo elegido: "{{$periodo->bloque}}"</h2></td>
-      <td><a href="/periodos" class="btn btn-default btn-sm">Volver</a>
-          {!! Html::link(route('periodos.edit', $periodo->id), 'Editar', array('class' => 'btn btn-warning btn-sm')) !!}</td>
+      
   </table>
 </p>
 
@@ -32,7 +31,8 @@
           @endif
       </tbody>
   </table>
-
+<center><td><a href="/periodos" class="btn btn-default btn-sm">Volver</a>
+          {!! Html::link(route('periodos.edit', $periodo->id), 'Editar', array('class' => 'btn btn-sm btn-primary')) !!}</td></center>
 
        <div class="page-header">
         

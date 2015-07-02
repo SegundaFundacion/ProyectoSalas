@@ -35,11 +35,9 @@
           <div class="btn btn-sm btn-primary disabled{{ Session::get('class') }}">{{ Session::get('message')}}</div>
         @endif
         
-        <center><div id="map"></div>
+        
 <br>
-<table>
-              <td><a href="/campus" class="btn btn-default btn-sm">Volver</a></td>
-</table>
+
        <div class="page-header">
         
       </div>

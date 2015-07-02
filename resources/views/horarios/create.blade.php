@@ -6,8 +6,7 @@
           <section class="wrapper">
           <br>
               <h2>Registro de Horarios</h2></td>
-    <td><a href="/horarios" class="btn btn-default btn-sm">Volver</a>
-    <td><a href="/horarios/create" class="btn btn-warning btn-sm">Agregar horario</a></td>
+    
   </table>
 </p>
 <h4>Nuevo horario</h4>

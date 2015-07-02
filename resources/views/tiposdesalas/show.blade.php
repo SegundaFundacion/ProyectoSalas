@@ -6,8 +6,7 @@
           <section class="wrapper">
           <br>
             <h3> Detalle Tipo Sala</h3>
-            <td><a href="/tiposdesalas" class="btn btn-default btn-sm">Volver</a>
-    {!! Html::link(route('tiposdesalas.edit', $tiposdesala->id), 'Editar', array('class' => 'btn btn-warning btn-sm')) !!}</td>
+            
   </table>
 </p>
 <h4>Información del tipo de sala "{{$tiposdesala->nombre}}" </h4>
@@ -30,4 +29,6 @@
           @endif
       </tbody>
   </table>
+  <center><td><a href="/tiposdesalas" class="btn btn-default btn-sm">Volver</a>
+    {!! Html::link(route('tiposdesalas.edit', $tiposdesala->id), 'Editar', array('class' => 'btn btn-sm btn-primary')) !!}</td></center>
 @stop

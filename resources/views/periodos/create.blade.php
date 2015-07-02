@@ -4,8 +4,7 @@
       
       <table>
     <td width=505><h2>Registro de Periodos</h2></td>
-    <td><a href="/periodos" class="btn btn-default btn-sm">Volver</a>
-    <td><a href="/periodos/create" class="btn btn-warning btn-sm">Agregar Periodo</a></td>
+    
   </table>
 </p>
 <h4>Nuevo Periodo</h4>

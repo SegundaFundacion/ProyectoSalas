@@ -16,6 +16,7 @@
                           <div class="form-group">
                               <label class="col-sm-2 col-sm-2 control-label">Nombre: </label>
                               <div class="col-sm-10">
+
                                   <input class="form-control" id="disabledInput" type="text" placeholder="{{$facultad->nombre}}" disabled>
                               </div>
                               <br><br><br>
