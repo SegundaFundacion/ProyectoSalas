@@ -17,7 +17,7 @@
                           <div class="form-group"><p>Roles:
                 {!! Form::open(['route' => 'roles.store']) !!}
         <div class="form-group">
-          {!! Form::text('nombre', null, ['class' => 'form-control', 'placeholder'=>'Rol']) !!}
+          {!! Form::text('nombre', null, ['class' => 'form-control', 'placeholder'=>'Ingrese nombre de Rol']) !!}
         </div>
         <div class="form-group">
           {!! Form::text('descripcion', null,['class'=>'form-control', 'placeholder'=>'Descripcion'])!!}
