@@ -2,7 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Http\Requests\CreateHorariosRequest;
 use Illuminate\Http\Request;
 
 class HorariosController extends Controller {
@@ -35,7 +35,7 @@ class HorariosController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateHorariosRequest $request)
 	{
 		$horario = new \App\Models\Horario;
 		$horario->fecha = \Request::input('fecha');
@@ -79,7 +79,7 @@ class HorariosController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, CreateHorariosRequest $request)
 	{
 		$horario = \App\Models\Horario::find($id);
 		$horario->fecha = \Request::input('fecha');

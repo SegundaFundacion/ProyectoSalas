@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateDepartamentoRequest;
 use App\Models\Facultad;
 use Illuminate\Http\Request;
 
@@ -33,7 +34,7 @@ class DepartamentosController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateDepartamentoRequest $request)
 	{
 		$departamento = new \App\Models\Departamento;
 
@@ -77,7 +78,7 @@ class DepartamentosController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, CreateDepartamentoRequest $request)
 	{
 			$departamento = \App\Models\Departamento::find($id);
 

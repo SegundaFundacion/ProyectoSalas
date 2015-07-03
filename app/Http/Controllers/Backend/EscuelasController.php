@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateEscuelasRequest;
 use App\Models\Departamento;
 use Illuminate\Http\Request;
 
@@ -33,7 +34,7 @@ class EscuelasController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateEscuelasRequest $request)
 	{
 		$escuela = new \App\Models\Escuela;
 		$escuela->nombre = \Request::input('nombre');
@@ -74,7 +75,7 @@ class EscuelasController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, CreateEscuelasRequest $request)
 	{
 		$escuela = \App\Models\Escuela::find($id);
 		$escuela->nombre = \Request::input('nombre');

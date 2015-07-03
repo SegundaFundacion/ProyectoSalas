@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateEstudianteRequest;
 use App\Models\Carrera;
 use Illuminate\Http\Request;
 
@@ -33,7 +34,7 @@ class EstudiantesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateEstudianteRequest $request)
 	{
 		$estudiante = new \App\Models\Estudiante;
 		$estudiante->carrera_id = \Request::input('carrera_id');
@@ -64,7 +65,7 @@ class EstudiantesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit($id, CreateEstudianteRequest $request)
 	{
 		$carrera = Carrera::lists('nombre','id');
 		return view('estudiantes.edit')->with('estudiante', \App\Models\Estudiante::find($id))->with('carrera',$carrera);

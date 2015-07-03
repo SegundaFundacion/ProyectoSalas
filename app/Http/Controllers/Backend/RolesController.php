@@ -2,7 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Http\Requests\CreateRolesRequest;
 use Illuminate\Http\Request;
 
 class RolesController extends Controller {
@@ -32,8 +32,9 @@ class RolesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateRolesRequest $request)
 	{
+		
 		$roles = new \App\Models\Rol;
 		$roles->nombre = \Request::input('nombre');
 		$roles->descripcion = \Request::input('descripcion');
@@ -70,7 +71,7 @@ class RolesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id,  CreateRolesRequest $request )
 	{
 		$roles = \App\Models\Rol::find($id);
 		$roles->nombre = \Request::input('nombre');

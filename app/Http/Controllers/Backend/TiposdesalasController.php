@@ -2,7 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Http\Requests\CreatetiposalasRequest;
 use Illuminate\Http\Request;
 
 class TiposdesalasController extends Controller {
@@ -32,7 +32,7 @@ class TiposdesalasController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreatetiposalasRequest $request)
 	{
 		$tiposdesalas = new \App\Models\Tipodesala;
 		$tiposdesalas->nombre = \Request::input('nombre');
@@ -70,7 +70,7 @@ class TiposdesalasController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, CreatetiposalasRequest $request)
 	{
 		$tiposdesalas = \App\Models\Tipodesala::find($id);
 		$tiposdesalas->nombre = \Request::input('nombre');

@@ -8,7 +8,7 @@
                       <div class="content-panel">
                           <table class="table table-striped table-advance table-hover">
                           <div class="head-table">
-                            <h4>Lista Asignaturas<a href="/roles/create" style="position: absolute; right: 30px" class="btn btn-default">Agregar Asignatura</a>
+                            <h4>Lista Asignaturas<a href="/asignaturas/create" style="position: absolute; right: 30px" class="btn btn-default">Agregar Asignatura</a>
                             </h4>
                           </div>
                             <hr>

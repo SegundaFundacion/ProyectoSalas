@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateFuncionarioRequest;
 use App\Models\Departamento;
 use Illuminate\Http\Request;
 
@@ -33,7 +34,7 @@ class FuncionariosController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateFuncionarioRequest $request)
 	{
 		$funcionarios = new \App\Models\Funcionario;
 		$funcionarios->departamento_id = \Request::input('departamento_id');
@@ -41,7 +42,7 @@ class FuncionariosController extends Controller {
 		$funcionarios->nombres = \Request::input('nombres');
 		$funcionarios->apellidos = \Request::input('apellidos');
 		$funcionarios->save();
-		return redirect()->route('funcionarios.index')->with('message', 'Funcionario Agregado');
+		return redirect()->route('funcionarios.index');
 	}
 
 	/**
@@ -75,7 +76,7 @@ class FuncionariosController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, CreateFuncionarioRequest $request)
 	{
 		$funcionarios = \App\Models\Funcionario::find($id);
 		$funcionarios->departamento_id = \Request::input('departamento_id');
@@ -83,7 +84,7 @@ class FuncionariosController extends Controller {
 		$funcionarios->nombres = \Request::input('nombres');
 		$funcionarios->apellidos = \Request::input('apellidos');
 		$funcionarios->save();
-		return redirect()->route('funcionarios.index', ['funcionario' => $id])->with('message', 'Cambios guardados');
+		return redirect()->route('funcionarios.index', ['funcionario' => $id]);
 	}
 
 	/**
@@ -96,7 +97,7 @@ class FuncionariosController extends Controller {
 	{
 		$funcionarios = \App\Models\Funcionario::find($id);
 		$funcionarios->delete();
-		return redirect()->route('funcionarios.index')->with('message', 'Funcionario Eliminado con éxito');
+		return redirect()->route('funcionarios.index');
 	}
 
 }

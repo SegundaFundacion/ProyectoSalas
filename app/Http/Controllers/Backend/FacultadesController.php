@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateFacultadRequest;
 use App\Models\Campus;
 use Illuminate\Http\Request;
 
@@ -33,7 +34,7 @@ class FacultadesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateFacultadRequest $request)
 	{
 		$facultad = new \App\Models\Facultad;
 
@@ -75,7 +76,7 @@ class FacultadesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, CreateFacultadRequest $request)
 	{
 			$facultad = \App\Models\Facultad::find($id);
 			$facultad->nombre = \Request::input('nombre');

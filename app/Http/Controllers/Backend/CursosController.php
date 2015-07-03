@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateCursosRequest;
 use App\Models\Doncente;
 use App\Models\Asignatura;
 use Illuminate\Http\Request;
@@ -35,7 +36,7 @@ class CursosController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateCursosRequest $request)
 	{
 		$curso = new \App\Models\Curso;
 			$curso->semestre = \Request::input('semestre');
@@ -80,7 +81,7 @@ class CursosController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, CreateCursosRequest $request)
 	{
 		    $curso = \App\Models\Curso::find($id);
 			$curso->semestre = \Request::input('semestre');

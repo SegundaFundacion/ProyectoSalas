@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateCarrerasRequest;
 use App\Models\Escuela;
 use Illuminate\Http\Request;
 
@@ -33,7 +34,7 @@ class CarrerasController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateCarrerasRequest $request)
 	{
 		$carrera = new \App\Models\Carrera;
 		$carrera->codigo = \Request::input('codigo');
@@ -75,7 +76,7 @@ class CarrerasController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, CreateCarrerasRequest $request)
 	{
 		$carrera = \App\Models\Carrera::find($id);
 		$carrera->codigo = \Request::input('codigo');

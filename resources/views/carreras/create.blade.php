@@ -7,6 +7,16 @@
           <br>
             <h3> Registrar Una Carrera</h3>
             
+            @if ($errors->any())
+                      <div class="alert alert-danger" role="alert">
+                        <p>Corrija el Error: </p>
+                        <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error}}</li>>
+                        @endforeach
+                        </ul>
+                      </div>
+                      @endif
             <!-- BASIC FORM ELELEMNTS -->
             <div class="row mt">
               <div class="col-lg-12">

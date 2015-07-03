@@ -2,7 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Http\Requests\CreateCampusRequest;
 use Illuminate\Http\Request;
 
 class CampusController extends Controller {
@@ -32,7 +32,7 @@ class CampusController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateCampusRequest $request)
 	{
 		$campus = new \App\Models\Campus;
 
@@ -77,7 +77,7 @@ class CampusController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, CreateCampusRequest $request)
 	{
 		$campus = \App\Models\Campus::find($id);
 

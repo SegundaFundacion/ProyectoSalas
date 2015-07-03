@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateSalasRequest;
 use App\Models\Tipodesala;
 use App\Models\Campus;
 use Illuminate\Http\Request;
@@ -35,7 +36,7 @@ class SalasController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateSalasRequest $request)
 	{
 		$salas = new \App\Models\Sala;
 		$salas->campus_id = \Request::input('campus_id');
@@ -79,7 +80,7 @@ class SalasController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, CreateSalasRequest $request)
 	{
 		$salas = \App\Models\Sala::find($id);
 		$salas->campus_id = \Request::input('campus_id');

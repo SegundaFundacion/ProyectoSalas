@@ -6,6 +6,18 @@
           <section class="wrapper">
           <br>
             <h3> Registro Tipo Salas</h3>
+
+            @if ($errors->any())
+                      <div class="alert alert-danger" role="alert">
+                        <p>Corrija el Error: </p>
+                        <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error}}</li>>
+                        @endforeach
+                        </ul>
+                      </div>
+                      @endif
+
             <td><a href="/tiposdesalas" class="btn btn-default btn-sm">Volver</a>
     <td><a href="/tiposdesalas/create" class="btn btn-warning btn-sm">Agregar Tipo de Sala</a></td>
   </table>

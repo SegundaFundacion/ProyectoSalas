@@ -7,6 +7,18 @@
               <div class="col-lg-12">
                   <div class="form-panel">
                       <h4 class="mb">Edite la información del campus "{{$campu->nombre}}" </h4>
+
+                       @if ($errors->any())
+                      <div class="alert alert-danger" role="alert">
+                        <p>Corrija el Error: </p>
+                        <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error}}</li>>
+                        @endforeach
+                        </ul>
+                      </div>
+                      @endif 
+
                       {!! Form::model($campu, ['route' => ['campus.update', $campu->id], 'method' => 'patch']) !!}
                       <form class="form-horizontal style-form" method="get">
                           <div class="form-group">

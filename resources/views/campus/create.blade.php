@@ -6,6 +6,16 @@
           <section class="wrapper">
       <p>Ingrese Datos de Campus a agregar</p>
       
+       @if ($errors->any())
+                      <div class="alert alert-danger" role="alert">
+                        <p>Corrija el Error: </p>
+                        <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error}}</li>>
+                        @endforeach
+                        </ul>
+                      </div>
+                      @endif 
 
       {!! Form::open(['route' => 'campus.store']) !!}
         <div class="form-group">

@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 class Periodo extends Model {
 
 	protected $table = 'periodos';
-	protected $fillable = ['bloque','inicio_time','fin_time'];
+	protected $fillable = ['bloque','inicio','fin'];
 
     public function horarios()
     {

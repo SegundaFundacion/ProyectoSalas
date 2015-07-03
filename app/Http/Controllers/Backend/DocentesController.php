@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateDocenteRequest;
 use App\Models\Departamento;
 use Illuminate\Http\Request;
 
@@ -33,7 +34,7 @@ class DocentesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateDocenteRequest $request)
 	{
 		$docentes = new \App\Models\Docente;
 		$docentes->departamento_id = \Request::input('departamento_id');
@@ -41,7 +42,7 @@ class DocentesController extends Controller {
 		$docentes->nombres = \Request::input('nombres');
 		$docentes->apellidos = \Request::input('apellidos');
 		$docentes->save();
-		return redirect()->route('docentes.index')->with('message', 'Docente Agregado');
+		return redirect()->route('docentes.index');
 	}
 
 	/**
@@ -75,7 +76,7 @@ class DocentesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, CreateDocenteRequest $request)
 	{
 		$docentes = \App\Models\Docente::find($id);
 		$docentes->departamento_id = \Request::input('departamento_id');
@@ -83,7 +84,7 @@ class DocentesController extends Controller {
 		$docentes->nombres = \Request::input('nombres');
 		$docentes->apellidos = \Request::input('apellidos');
 		$docentes->save();
-		return redirect()->route('docentes.index', ['docente' => $id])->with('message', 'Cambios guardados');
+		return redirect()->route('docentes.index', ['docente' => $id]);
 	}
 
 	/**
@@ -96,7 +97,7 @@ class DocentesController extends Controller {
 	{
 		$docentes = \App\Models\Docente::find($id);
 		$docentes->delete();
-		return redirect()->route('docentes.index')->with('message', 'Docente Eliminado con éxito');
+		return redirect()->route('docentes.index');
 	}
 
 }

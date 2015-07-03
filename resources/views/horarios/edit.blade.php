@@ -6,6 +6,18 @@
           <section class="wrapper">
           <br>
             <h2>Registro de Horarios</h2></td>
+
+             @if ($errors->any())
+                      <div class="alert alert-danger" role="alert">
+                        <p>Corrija el Error: </p>
+                        <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error}}</li>>
+                        @endforeach
+                        </ul>
+                      </div>
+                      @endif
+
     <td><a href="/horarios" class="btn btn-default btn-sm">Volver</a>
     <a href="/horarios/create" class="btn btn-warning btn-sm">Agregar horario</a></td>
 </table>

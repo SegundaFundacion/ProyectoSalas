@@ -6,6 +6,8 @@
           <section class="wrapper">
           <br>
             <h3> Detalle de Roles</h3>
+
+
             
             <!-- BASIC FORM ELELEMNTS -->
             <div class="row mt">
@@ -14,6 +16,18 @@
                       <h4>Actualizar Rol "{{$role->nombre}}"</h4>
   <table class="table table-striped table-hover ">
     <tbody>
+
+       @if ($errors->any())
+                      <div class="alert alert-danger" role="alert">
+                        <p>Corrija el Error: </p>
+                        <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error}}</li>>
+                        @endforeach
+                        </ul>
+                      </div>
+                      @endif 
+                      
       {!! Form::model($role, ['route' => ['roles.update', $role->id], 'method' => 'patch']) !!}
       <div class="form-group">
         {!! Form::text('nombre', null, ['class' => 'form-control', 'placeholder'=>'Rol']) !!}

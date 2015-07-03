@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateAsignaturasRequest;
 use App\Models\Departamento;
 use Illuminate\Http\Request;
 
@@ -33,7 +34,7 @@ class AsignaturasController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateAsignaturasRequest $request)
 	{
 		$asignaturas = new \App\Models\Asignatura;
 		$asignaturas->nombre = \Request::input('nombre');
@@ -75,7 +76,7 @@ class AsignaturasController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, CreateAsignaturasRequest $request)
 	{
 		$asignaturas = \App\Models\Asignatura::find($id);
 		$asignaturas->nombre = \Request::input('nombre');

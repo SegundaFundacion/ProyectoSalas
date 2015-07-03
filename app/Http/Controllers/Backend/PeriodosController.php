@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreatePeriodosRequest;
 
 use Illuminate\Http\Request;
 
@@ -32,7 +33,7 @@ class PeriodosController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreatePeriodosRequest $request)
 	{
 		$periodo = new \App\Models\Periodo;
 		$periodo->bloque = \Request::input('bloque');
@@ -71,7 +72,7 @@ class PeriodosController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, CreatePeriodosRequest $request)
 	{
 		$periodo = \App\Models\Periodo::find($id);
 		$periodo->bloque = \Request::input('bloque');

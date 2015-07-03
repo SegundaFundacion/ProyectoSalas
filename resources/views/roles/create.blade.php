@@ -12,6 +12,18 @@
               <div class="col-lg-12">
                   <div class="form-panel">
                       <h4 class="mb">Ingrese la información de los Roles</h4>
+
+                      @if ($errors->any())
+                      <div class="alert alert-danger" role="alert">
+                        <p>Corrija el Error: </p>
+                        <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error}}</li>>
+                        @endforeach
+                        </ul>
+                      </div>
+                      @endif      
+
                       {!! Form::open(['route' => 'roles.store']) !!}
                       <form class="form-horizontal style-form" method="get">
                           <div class="form-group"><p>Roles:
