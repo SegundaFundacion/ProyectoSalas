@@ -45,17 +45,18 @@
           <a class="navbar-brand" href="/">Home</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
+          
+              <ul class="nav navbar-nav navbar-right">
+          @if (Auth::guest())
+            <li><a href="{{ url('/auth/login') }}">Login</a></li>
+            <li><a href="{{ url('/auth/register') }}">Registrar</a></li>
+          @else
           <ul class="nav navbar-nav">
             <li class="active"><a href="/menuadmin">Administrador</a></li>
             <li><a href="/menuencar">Encargado</a></li>
             <li><a href="/menudocen">Docente</a></li>
             <li><a href="/menuestudi">Estudiante</a></li>
               </ul>
-              <ul class="nav navbar-nav navbar-right">
-          @if (Auth::guest())
-            <li><a href="{{ url('/auth/login') }}">Login</a></li>
-            <li><a href="{{ url('/auth/register') }}">Registrar</a></li>
-          @else
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
