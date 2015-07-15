@@ -18,8 +18,6 @@
                       </div>
                       @endif
 
-            <td><a href="/tiposdesalas" class="btn btn-default btn-sm">Volver</a>
-    <td><a href="/tiposdesalas/create" class="btn btn-warning btn-sm">Agregar Tipo de Sala</a></td>
   </table>
 </p>
 <h4>Nuevo Tipo de Sala</h4>
