@@ -52,7 +52,7 @@
             <li><a href="{{ url('/auth/register') }}">Registrar</a></li>
           @else
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/menuadmin">Administrador</a></li>
+            <li><a href="/menuadmin">Administrador</a></li>
             <li><a href="/menuencar">Encargado</a></li>
             <li><a href="/menudocen">Docente</a></li>
             <li><a href="/menuestudi">Estudiante</a></li>
