@@ -5,7 +5,7 @@
 <br><br><br>
 
 <div class="jumbotron">
-        <p> <CENTER> <strong>Bienvenido al sistema web "Gestion de Salas", por favor, loguese o regístrese si no tiene registro.</strong></CENTER> </p>
+        <p> <CENTER> <strong>Bienvenido al sistema web "Gestion de Salas", por favor, logueese o regístrese si no tiene registro.</strong></CENTER> </p>
       </div>
 <section id="main-content">
           <section class="wrapper">
