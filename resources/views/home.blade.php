@@ -4,7 +4,9 @@
  <br>
   <br>
    <br>
-   
+   <div class="jumbotron">
+        <p> <CENTER> <strong>Menú Principal.</strong></CENTER> </p>
+      </div>
 
 <br>
    <br>
