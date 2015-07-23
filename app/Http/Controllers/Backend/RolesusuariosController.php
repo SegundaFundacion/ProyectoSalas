@@ -23,8 +23,9 @@ class RolesusuariosController extends Controller {
 	 * @return Response
 	 */
 	public function create()
-	{
-		return view('rolesusuarios.create');
+	{   
+		$rol = \App\Models\Rol::lists('nombre', 'id');
+		return view('rolesusuarios.create')->with('rol',$rol);
 	}
 	/**
 	 * Store a newly created resource in storage.
@@ -49,7 +50,8 @@ class RolesusuariosController extends Controller {
 	public function show($id)
 	{
 		$rolesusuarios = \App\Models\Rol_Usuario::find($id);
-		return view('rolesusuarios.show')->with('rolesusuario',$rolesusuarios);
+		$rol = \App\Models\Rol::find($rolesusuarios->rol_id);
+		return view('rolesusuarios.show')->with('rolesusuario',$rolesusuarios)->with('rol',$rol);
 	}
 
 	/**
@@ -60,7 +62,8 @@ class RolesusuariosController extends Controller {
 	 */
 	public function edit($id)
 	{
-		return view('rolesusuarios.edit')->with('rolesusuario', \App\Models\Rol_Usuario::find($id));
+		$rol = \App\Models\Rol::lists('nombre', 'id');
+		return view('rolesusuarios.edit')->with('rolesusuario', \App\Models\Rol_Usuario::find($id))->with('rol',$rol);
 	}
 
 	/**

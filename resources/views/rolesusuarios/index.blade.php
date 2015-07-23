@@ -1,21 +1,21 @@
 @extends('app')
 
 @section('content')
-<section id="main-content">
+ <section id="main-content">
           <section class="wrapper">
               <div class="row mt">
                   <div class="col-md-12">
                       <div class="content-panel">
                           <table class="table table-striped table-advance table-hover">
                           <div class="head-table">
-                            <h4>Listado de Roles Usuarios<a href="/rolesusuarios/create" style="position: absolute; right: 30px" class="btn btn-default">Agregar Rol Usuario</a>
+                            <br><br><br><br><br><br>
+                            <h4>Listado de Usuarios<a href="/rolesusuarios/create" style="position: absolute; right: 30px" class="btn btn-warning btn-sm">Agregar Rol</a>
                             </h4>
                           </div>
                             <hr>
                               <thead>
                               <tr>
-                                  <th>Rut</th>
-                                  <th>Rol</th>
+                                  <th> RUT</th>
                                   <th></th>
                                   <th></th>
                               </tr>
@@ -24,12 +24,11 @@
                               @foreach($rolesusuarios as $rolesusuario)
                               <tr>
                                   <td>{{ $rolesusuario->rut }}</td>
-                                  <td>{{ $rolesusuario->rol->nombre  }}</td>
-                                  <td>{!! Html::link(route('rolesusuarios.show', $rolesusuario->id), 'Detalles', array('class' => 'btn btn-xs btn-success')) !!}</td>
-                                  <td>{!! Html::link(route('rolesusuarios.edit', $rolesusuario->id), 'Editar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
+                                  <td>{!! Html::link(route('rolesusuarios.show', $rolesusuario->id), 'Detalles', array('class' => 'label label-info')) !!}</td>
+                                  <td>{!! Html::link(route('rolesusuarios.edit', $rolesusuario->id), 'Editar', array('class' => 'label label-success')) !!}</td>
                                   <td>
                                         {!! Form::open(array('route' => array('rolesusuarios.destroy', $rolesusuario->id), 'method' => 'DELETE')) !!}
-                                        <button class="btn btn-xs btn-danger">Eliminar</button>
+                                        <button class="label label-danger">Eliminar</button>
                                         {!! Form::close() !!}
                                   </td>
                               </tr>
@@ -46,26 +45,5 @@
 </p>
               </section>
               </section>
-<div class="page-header">
-        
-      </div>
-      <p>
-        
-      </p>
-      <p>
-        
-      </p>
-      <p>
-        
-      </p>
-      <p>
-        
-      </p>
-
-
-      <div class="page-header">
-@endsection
-
-      
   </body>
-</html>
+</html>l
