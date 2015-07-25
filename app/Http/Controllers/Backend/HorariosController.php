@@ -26,8 +26,9 @@ class HorariosController extends Controller {
 	{
 		$periodo = \App\Models\Periodo::lists('bloque','id');
 		$sala = \App\Models\Sala::lists('nombre','id');
-		$curso = \App\Models\Curso::lists('asignatura_id','id');
-		return view('horarios.create')->with('periodo',$periodo)->with('salas',$sala)->with('curso',$curso);
+		$curso = \App\Models\Curso::lists('asignatura_id','seccion','id');
+		$asignatura = \App\Models\Asignatura::lists('nombre','id');
+		return view('horarios.create')->with('periodo',$periodo)->with('salas',$sala)->with('curso',$curso)->with('asignatura',$asignatura);
 	}
 
 	/**
@@ -70,7 +71,9 @@ class HorariosController extends Controller {
 	public function edit($id)
 	{
 		$periodos = \App\Models\Periodo::lists('bloque','id');
-		return view('horarios.edit')->with('horario', \App\Models\Horario::find($id))->with('periodos',$periodos);
+		$salas = \App\Models\Sala::lists('nombre','id');
+		$asignaturas = \App\Models\Asignatura::lists('nombre','id');
+		return view('horarios.edit')->with('horario', \App\Models\Horario::find($id))->with('periodos',$periodos)->with('salas', $salas)->with('asignaturas', $asignaturas);
 	}
 
 	/**

@@ -39,6 +39,7 @@
         </div>
 
         <div class="form-group">
+         <h4>Seleccione Profesor que dicta el Curso:</h4>
         {!! Form::select('docente_id', $docente) !!}
         </div>
         <div class="form-group">

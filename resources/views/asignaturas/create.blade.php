@@ -22,7 +22,7 @@
             <div class="row mt">
               <div class="col-lg-12">
                   <div class="form-panel">
-                      <h4 class="mb">Ingrese la Asignatura</h4>
+                      <h4 class="mb">Ingrese la Asignatura:</h4>
                       <table class="table table-striped table-hover ">
     <tbody>
       {!! Form::open(['route' => 'asignaturas.store']) !!}
@@ -36,6 +36,7 @@
           {!! Form::text('descripcion', null,['class'=>'form-control', 'placeholder'=>'Descripcion'])!!}
         </div>
         <div class="form-group">
+        <h4>Seleccione Departamento al cual va a pertenecer la Asignatura:</h4>
         {!! Form::select('departamento_id', $departamento) !!}
         </div>
         <div class="form-group">

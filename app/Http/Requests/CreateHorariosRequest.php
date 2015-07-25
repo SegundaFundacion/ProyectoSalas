@@ -24,10 +24,11 @@ class CreateHorariosRequest extends Request {
 		return [
 			
 
-			'fecha' => 'required|date_format:"m/d/Y',
-			'salas_id' => 'required|integer',
-			'periodo_id' => 'required|integer',
-			'curso_id' => 'required|integer',
+			'fecha' => "required|date",
+			'salas_id' => 'required',
+			'periodo_id' => 'required',
+			 'curso_id' => "required"
+			
 
 
 

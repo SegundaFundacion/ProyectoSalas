@@ -7,9 +7,10 @@ class Horario extends Model {
 	protected $table = 'horarios';
 	protected $fillable = ['fecha','sala_id', 'periodo_id', 'curso_id'];
 
+
     public function periodo()
     {
-    	return $this->belongsTo('App\Models\Periodo');
+    	return $this->hasMany('App\Models\Periodo');
     }
 
     public function salas()
@@ -19,7 +20,7 @@ class Horario extends Model {
 
     public function cursos()
     {
-    	return $this->belongsTo('App\Models\Curso');
+    	return $this->hasMany('App\Models\Curso');
     }
 
     

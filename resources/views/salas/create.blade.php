@@ -18,15 +18,16 @@
 
   </table>
 </p>
-<h4>Nueva Sala</h4>
   <table class="table table-striped table-hover ">
     <tbody>
       {!! Form::open(['route' => 'salas.store']) !!}
-        <div class="form-group">
-          {!! Form::select('campus_id', $campus) !!}
+        <div class="form-group">  
+           <h4>Seleccione Campus al cual va a pertenecer la sala:</h4>
+          {!! Form::select('campus_id', $campus) !!}<p>
         </div>
         <div class="form-group">
-          {!! Form::select('tipo_sala_id', $tiposdesala) !!}
+           <h4>Seleccione el tipo de sala:</h4>
+          {!! Form::select('tipo_sala_id', $tiposdesala) !!}<p>
         </div>
         <div class="form-group">
           {!! Form::text('nombre', null,['class'=>'form-control', 'placeholder'=>'Nombre'])!!}
