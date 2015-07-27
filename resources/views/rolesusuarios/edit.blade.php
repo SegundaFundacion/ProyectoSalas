@@ -4,7 +4,7 @@
 
 <section id="main-content">
           <section class="wrapper">
-          <br><br><br>
+          <br>
             <h3> Detalle del Usuario</h3>
 
             <!-- BASIC FORM ELELEMNTS -->
@@ -34,7 +34,7 @@
                                {!! Form::select('rol_id', $rol, ['class' => 'form-control']) !!}
                               </div>
                               <br><br><br>
-                                {!! Form::submit('Actualizar', ["class" => "btn btn-success btn-block"]) !!}
+                                {!! Form::submit('Modificar', ["class" => "btn btn-success btn-block"]) !!}
                           </div>
                       </form>
                       {!! Form::close() !!}
@@ -58,3 +58,4 @@
 </body>
 
 </html>
+@endsection

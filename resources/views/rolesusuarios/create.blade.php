@@ -30,7 +30,7 @@
                 {!! Form::select('rol_id', $rol, ['class' => 'form-control']) !!}<p>
               </div>
               <div class="form-group">
-                {!! Form::submit('Registrar', ["class" => "btn btn-success btn-block"]) !!}
+                {!! Form::submit('Enviar', ["class" => "btn btn-success btn-block"]) !!}
               </div>
           </form>
               {!! Form::close() !!}
@@ -55,4 +55,5 @@
   </body>
 
 </html>
+@endsection
 

@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class CreateCampusRequest extends Request {
+class CreateRolesusuariosRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -22,14 +22,12 @@ class CreateCampusRequest extends Request {
 	public function rules()
 	{
 		return [
-
-            'nombre' => 'required|string',
-            'direccion' => 'required|string',
-            'latitud' => 'required|numeric',
-            'longitud' => 'required|numeric',
-            'descripcion' => 'required|string',
-            //'rut' => 'required|integer',
 			
+             
+            "rut" => "required|min:7|max:8|integer",
+			"rol_id" => "required"
+            
+
 		];
 	}
 

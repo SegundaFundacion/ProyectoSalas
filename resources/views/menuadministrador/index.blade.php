@@ -19,6 +19,7 @@
                           <a href="/docentes"  class="btn btn-lg btn-success">Docentes</a>
                           <a href="/estudiantes"  class="btn btn-lg btn-primary">Estudiantes</a>
                           <a href="/roles"  class="btn btn-lg btn-success">Roles</a>
+                          <a href="/rolesusuarios"  class="btn btn-lg btn-primary">Roles Usuarios</a>
                       </center>
         
         

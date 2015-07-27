@@ -4,7 +4,7 @@
 
 <section id="main-content">
           <section class="wrapper">
-          <br><br><br>
+          <br>
             <h3> Detalle del Usuario</h3>
             
             <!-- BASIC FORM ELELEMNTS -->
@@ -33,7 +33,7 @@
 <br>
 <table>
               <td><a href="/rolesusuarios" class="btn btn-default btn-sm">Volver</a>
-                {!! Html::link(route('rolesusuarios.edit', $rolesusuario->id), 'Editar', array('class' => 'btn btn-warning btn-sm')) !!}</td>
+                {!! Html::link(route('rolesusuarios.edit', $rolesusuario->id), 'Modificar', array('class' => 'btn btn-sm btn-primary')) !!}</td>
 </table>
 </center>
     </section>
@@ -42,3 +42,4 @@
 </body>
 
 </html>
+@endsection

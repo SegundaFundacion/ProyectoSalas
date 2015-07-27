@@ -10,7 +10,7 @@
                       <div class="content-panel">
                           <table class="table table-striped table-advance table-hover">
                           <div class="head-table">
-                            <h4>Listado de horarios<a href="/horarios/create" style="position: absolute; right: 30px" class="btn btn-warning btn-sm">Agregar horarios</a>
+                            <h4>Listado de horarios<a href="/horarios/create" style="position: absolute; right: 30px" class="btn btn-default">Agregar horarios</a>
                             </h4>
                           </div>
                             <hr>
@@ -29,11 +29,11 @@
                                   <td>{{ $horario->fecha }}</td>
                                   <td>{{ $horario->sala_id }}</td>
                                   <td>{{ $horario->periodo_id }}</td>
-                                  <td>{!! Html::link(route('horarios.show', $horario->id), 'Detalles', array('class' => 'label label-info')) !!}</td>
-                                  <td>{!! Html::link(route('horarios.edit', $horario->id), 'Editar', array('class' => 'label label-success')) !!}</td>
+                                  <td>{!! Html::link(route('horarios.show', $horario->id), 'Detalles', array('class' => 'btn btn-xs btn-success')) !!}</td>
+                                  <td>{!! Html::link(route('horarios.edit', $horario->id), 'Modificar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
                                   <td>
                                         {!! Form::open(array('route' => array('horarios.destroy', $horario->id), 'method' => 'DELETE')) !!}
-                                        <button class="label label-danger">Eliminar</button>
+                                        <button class="btn btn-xs btn-danger">Eliminar</button>
                                         {!! Form::close() !!}
                                   </td>
                               </tr>
@@ -45,5 +45,7 @@
               </div><!-- /row -->
               </section>
               </section>
+              @endsection
   </body>
 </html>
+@endsection

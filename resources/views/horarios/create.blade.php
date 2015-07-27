@@ -4,7 +4,7 @@
       
       <section id="main-content">
           <section class="wrapper">
-          <br><br><br>
+          <br>
             <h3> Registrar Horario</h3>
 
             <!-- BASIC FORM ELELEMNTS -->
@@ -39,7 +39,7 @@
                 {!! Form::select('curso_id', $asignatura) !!}</p>
               </div>
               <div class="form-group">
-                {!! Form::submit('Registrar', ["class" => "btn btn-success btn-block"]) !!}
+                {!! Form::submit('Enviar', ["class" => "btn btn-success btn-block"]) !!}
               </div>
           </form>
               {!! Form::close() !!}
@@ -61,3 +61,4 @@
   </body>
 
 </html>
+@endsection

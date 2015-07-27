@@ -2,7 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Http\Requests\CreateRolesusuariosRequest;
 use Illuminate\Http\Request;
 
 class RolesusuariosController extends Controller {
@@ -32,13 +32,13 @@ class RolesusuariosController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateRolesusuariosRequest $request)
 	{
 		$rolesusuarios = new \App\Models\Rol_Usuario;
 		$rolesusuarios->rut = \Request::input('rut');
 		$rolesusuarios->rol_id = \Request::input('rol_id');
 		$rolesusuarios->save();
-		return redirect()->route('rolesusuarios.index')->with('message', 'Rol Agregado a usuario');
+		return redirect()->route('rolesusuarios.index');
 	}
 
 	/**
@@ -72,7 +72,7 @@ class RolesusuariosController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, CreateRolesusuariosRequest $request)
 	{
 		$rolesusuarios = \App\Models\Rol_Usuario::find($id);
 		$rolesusuarios->rut = \Request::input('rut');
@@ -91,7 +91,7 @@ class RolesusuariosController extends Controller {
 	{
 		$rolesusuarios = \App\Models\Rol_Usuario::find($id);
 		$rolesusuarios->delete();
-		return redirect()->route('rolesusuarios.index')->with('message', 'Rol Eliminado con éxito');
+		return redirect()->route('rolesusuarios.index');
 	}
 
 }
