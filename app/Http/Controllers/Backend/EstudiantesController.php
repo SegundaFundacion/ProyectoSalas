@@ -43,7 +43,7 @@ class EstudiantesController extends Controller {
 		$estudiante->apellidos = \Request::input('apellidos');
 		$estudiante->email = \Request::input('email');
 		$estudiante->save();
-		return redirect()->route('estudiantes.index')->with('message', 'Estudiante Agregado');
+		return redirect()->route('estudiantes.index');
 	}
 
 	/**
@@ -86,7 +86,7 @@ class EstudiantesController extends Controller {
 		$estudiante->apellidos = \Request::input('apellidos');
 		$estudiante->email = \Request::input('email');
 		$estudiante->save();
-		return redirect()->route('estudiantes.index', ['carrera' => $id])->with('message', 'Cambios guardados');
+		return redirect()->route('estudiantes.index', ['carrera' => $id]);
 	}
 
 	/**
@@ -99,7 +99,7 @@ class EstudiantesController extends Controller {
 	{
 		$estudiante = \App\Models\Estudiante::find($id);
 		$estudiante->delete();
-		return redirect()->route('estudiantes.index')->with('message', 'Estudiante Eliminado con éxito');
+		return redirect()->route('estudiantes.index');
 	}
 
 }

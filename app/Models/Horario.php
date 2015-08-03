@@ -20,7 +20,7 @@ class Horario extends Model {
 
     public function cursos()
     {
-    	return $this->hasMany('App\Models\Curso');
+    	return $this->belongsTo('App\Models\Curso');
     }
 
     

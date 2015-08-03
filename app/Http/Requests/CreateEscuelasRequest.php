@@ -25,7 +25,7 @@ class CreateEscuelasRequest extends Request {
 			
              'nombre' => 'required|string',
              'departamento_id' => 'required|integer',
-             'descripcion' => 'required|string',
+             'descripcion' => 'string',
 
 		];
 	}

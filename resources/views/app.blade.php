@@ -42,14 +42,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Home</a>
+          <a class="navbar-brand" href="/">Inicio</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           
               <ul class="nav navbar-nav navbar-right">
           @if (Auth::guest())
-            <li><a href="{{ url('/auth/login') }}">Login</a></li>
-            <li><a href="{{ url('/auth/register') }}">Registrar</a></li>
+            <li><a href="{{ url('/auth/login') }}">Ingresar</a></li>
+            
           @else
           <ul class="nav navbar-nav">
             <li><a href="/menuadmin">Administrador</a></li>
@@ -87,3 +87,5 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
+<br><br><br>
+<footer><p align="center"><span style="color:#80BFFF">© 2015 M&B Consultores. Todos los derechos reservados.</p></footer>

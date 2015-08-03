@@ -24,7 +24,7 @@
                       {!! Form::open(['route' => 'horarios.store']) !!}
                       <form class="form-horizontal style-form" method="get">
                           <div class="form-group">
-                {!! Form::text('fecha', null, ['class' => 'form-control', 'placeholder'=>'Fecha del Horario']) !!}
+                {!! Form::text('fecha', null, ['id' => 'fecha1','class' => 'form-control', 'placeholder'=>'Fecha del Horario']) !!}
               </div>
               <div class="form-group"><p>
                  <h4> Seleccione el Tipo de sala a Utilizar:</h4>
@@ -36,7 +36,7 @@
               </div>
               <div class="form-group"><p>
                  <h4> Seleccione Curso:</h4>
-                {!! Form::select('curso_id', $asignatura) !!}</p>
+                {!! Form::select('curso_id', $curso) !!}</p>
               </div>
               <div class="form-group">
                 {!! Form::submit('Enviar', ["class" => "btn btn-success btn-block"]) !!}

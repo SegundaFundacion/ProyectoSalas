@@ -21,7 +21,7 @@
 
   </table>
 </p>
-<h4>Nuevo curso</h4>
+<h4>Seleccione Asignatura:</h4>
   <table class="table table-striped table-hover ">
     <tbody>
       {!! Form::open(['route' => 'cursos.store']) !!}

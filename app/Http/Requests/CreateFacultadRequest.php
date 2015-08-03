@@ -25,7 +25,7 @@ class CreateFacultadRequest extends Request {
 
               'nombre' => 'required|string',
               'campus_id' => 'required|integer',
-              'descripcion' => 'required|string',
+              'descripcion' => 'string',
 
 			
 		];

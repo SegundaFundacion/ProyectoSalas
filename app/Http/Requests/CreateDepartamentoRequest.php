@@ -25,7 +25,7 @@ class CreateDepartamentoRequest extends Request {
 			
              'nombre' => 'required|string',
              'facultad_id' => 'required|integer',
-             'descripcion' => 'required|string',
+             'descripcion' => 'string',
 
 
 		];

@@ -39,7 +39,7 @@ class RolesController extends Controller {
 		$roles->nombre = \Request::input('nombre');
 		$roles->descripcion = \Request::input('descripcion');
 		$roles->save();
-		return redirect()->route('roles.index')->with('message', 'Rol Agregado');
+		return redirect()->route('roles.index');
 	}
 
 	/**
@@ -77,7 +77,7 @@ class RolesController extends Controller {
 		$roles->nombre = \Request::input('nombre');
 		$roles->descripcion = \Request::input('descripcion');
 		$roles->save();
-		return redirect()->route('roles.index')->with('message', 'Cambios guardados');
+		return redirect()->route('roles.index');
 	}
 
 	/**
@@ -90,7 +90,7 @@ class RolesController extends Controller {
 	{
 		$roles = \App\Models\Rol::find($id);
 		$roles->delete();
-		return redirect()->route('roles.index')->with('message', 'Rol Eliminado con éxito');
+		return redirect()->route('roles.index');
 	}
 
 }

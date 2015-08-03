@@ -27,7 +27,7 @@ class CreateCampusRequest extends Request {
             'direccion' => 'required|string',
             'latitud' => 'required|numeric',
             'longitud' => 'required|numeric',
-            'descripcion' => 'required|string',
+            'descripcion' => 'string',
             //'rut' => 'required|integer',
 			
 		];

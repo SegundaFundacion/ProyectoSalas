@@ -30,7 +30,14 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home');
+		$name = User::find($user->id)->nombres;
+		return redirect()->route('admin.index');
+	}
+
+
+    public function match()
+	{
+		$datosUsuarios = DB::table('usuarios')->lists('rut', 'remember_token');
 	}
 
 }

@@ -27,7 +27,7 @@ class CreateHorariosRequest extends Request {
 			'fecha' => "required|date",
 			'salas_id' => 'required',
 			'periodo_id' => 'required',
-			 'curso_id' => "required"
+			 'curso_id' => "required",
 			
 
 

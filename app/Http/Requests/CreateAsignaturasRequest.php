@@ -25,7 +25,7 @@ class CreateAsignaturasRequest extends Request {
 
              'codigo' => 'required|integer',
              'nombre' => 'required|string',
-             'descripcion' => 'required|string',
+             'descripcion' => 'string',
              'departamento_id' => 'required|integer',
 
 			

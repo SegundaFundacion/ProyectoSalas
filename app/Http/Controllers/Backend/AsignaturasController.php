@@ -42,7 +42,7 @@ class AsignaturasController extends Controller {
 		$asignaturas->descripcion = \Request::input('descripcion');
 		$asignaturas->departamento_id = \Request::input('departamento_id');
 		$asignaturas->save();
-		return redirect()->route('asignaturas.index')->with('message', 'asignaturas Agregado');
+		return redirect()->route('asignaturas.index');
 	}
 
 	/**
@@ -84,7 +84,7 @@ class AsignaturasController extends Controller {
 		$asignaturas->descripcion = \Request::input('descripcion');
 		$asignaturas->departamento_id = \Request::input('departamento_id');
 		$asignaturas->save();
-		return redirect()->route('asignaturas.index', ['asignatura' => $id])->with('message', 'Cambios guardados');
+		return redirect()->route('asignaturas.index', ['asignatura' => $id]);
 	}
 
 	/**
@@ -97,7 +97,7 @@ class AsignaturasController extends Controller {
 	{
 		$asignaturas = \App\Models\Asignatura::find($id);
 		$asignaturas->delete();
-		return redirect()->route('asignaturas.index')->with('message', 'asignaturas Eliminado con éxito');
+		return redirect()->route('asignaturas.index');
 	}
 
 }

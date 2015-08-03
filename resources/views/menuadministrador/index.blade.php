@@ -3,6 +3,7 @@
 <br><br><br>
 
 <div class="jumbotron">
+
         <p> <CENTER> <strong>Bienvenido al menu de administrador.</strong></CENTER> </p>
       </div>
 <section id="main-content">

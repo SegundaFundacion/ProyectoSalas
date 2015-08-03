@@ -27,7 +27,7 @@ class CreateCarrerasRequest extends Request {
                'escuela_id' => 'required|integer',
                'codigo' => 'required|integer',
                'nombre' => 'required|string',
-               'descripcion' => 'required|string',
+               'descripcion' => 'string',
 
 			
 		];

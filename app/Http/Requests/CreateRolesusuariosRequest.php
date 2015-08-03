@@ -24,7 +24,7 @@ class CreateRolesusuariosRequest extends Request {
 		return [
 			
              
-            "rut" => "required|min:7|max:8|integer",
+            "rut" => "required|integer",
 			"rol_id" => "required"
             
 

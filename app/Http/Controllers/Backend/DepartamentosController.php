@@ -15,7 +15,7 @@ class DepartamentosController extends Controller {
 	 */
 	public function index()
 	{
-		return view("departamentos.index")->with('departamentos', \App\Models\Departamento::paginate(5)->setPath('departamento'));
+		return view("departamentos.index")->with('departamentos', \App\Models\Departamento::paginate(15)->setPath('departamento'));
 	}
 
 	/**
@@ -44,7 +44,7 @@ class DepartamentosController extends Controller {
 
 		$departamento->save();
 
-		return redirect()->route('departamentos.index')->with('message', 'Departamento Agregado');
+		return redirect()->route('departamentos.index');
 	}
 
 	/**
@@ -87,7 +87,7 @@ class DepartamentosController extends Controller {
 			$departamento->descripcion = \Request::input('descripcion');
 
 			$departamento->save();
-			return redirect()->route('departamentos.index', ['departamento' => $id])->with('message', 'Cambios guardados');
+			return redirect()->route('departamentos.index', ['departamento' => $id]);
 	}
 
 	/**
@@ -102,7 +102,7 @@ class DepartamentosController extends Controller {
 
 			$departamento->delete();
 
-			return redirect()->route('departamentos.index')->with('message', 'Departamento Eliminado con éxito');
+			return redirect()->route('departamentos.index');
 	}
 
 }

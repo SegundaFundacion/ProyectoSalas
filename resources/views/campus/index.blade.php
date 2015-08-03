@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+        
         <section id="main-content">
           <section class="wrapper">
               <div class="row mt">
@@ -33,13 +33,18 @@
                                   <td>{{ $campu->rut_encargado }}</td>
                                   <td>{!! Html::link(route('campus.show', $campu->id), 'Detalles', array('class' => 'btn btn-xs btn-success')) !!}</td>
                                   <td>{!! Html::link(route('campus.edit', $campu->id), 'Modificar', array('class' => 'btn btn-xs btn-primary')) !!}</td>
+
                                   <td>
                                         {!! Form::open(array('route' => array('campus.destroy', $campu->id), 'method' => 'DELETE')) !!}
                                         <button class="btn btn-xs btn-danger">Eliminar</button>
+                                        <td>{!!Html::link('files/campus/'.$campu->id,'',['class' => 'btn glyphicon glyphicon-save', 'role' => 'button', 'aria-label' => 'Center Align'])!!}</td>
                                         {!! Form::close() !!}
+
                                   </td>
                               </tr>
+
                               @endforeach
+                              <th class="center">{!!Html::link('files/campusall','',['class' => 'glyphicon glyphicon-floppy-save', 'role' => 'button', 'aria-label' => 'Center Align'])!!}</th>
                               </tbody>
                           </table>
                       </div><!-- /content-panel -->
@@ -63,5 +68,7 @@
       <p>
         
       </p>
+
+      
 @endsection
 

@@ -34,6 +34,7 @@
         {!! Form::text('descripcion', null,['class'=>'form-control', 'placeholder'=>'Descripcion'])!!}
       </div>
       <div class="form-group">
+      <h4>Seleccione Departamento al cual va a pertenecer la Asignatura:</h4>
       {!! Form::select('departamento_id', $departamentos) !!}
       </div>
       <div class="form-group">

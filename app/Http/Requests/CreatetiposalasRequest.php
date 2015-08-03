@@ -24,7 +24,7 @@ class CreatetiposalasRequest extends Request {
 		return [
 
                'nombre' => 'required|string',
-               'descripcion' => 'required|string',
+               'descripcion' => 'string',
 			
 		];
 	}

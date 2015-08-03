@@ -12,4 +12,9 @@ class Rol extends Model {
     	return $this->hasMany('App\Models\Usuario');
     }
 
+    public function usuarios()
+    {
+        return $this->belongsToMany('App\Models\Usuario', 'roles_usuarios', 'rol_id', 'rut');
+    }
+
 }
