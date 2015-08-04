@@ -44,7 +44,7 @@
               </div><!-- /row -->
               </section>
               </section>
-
+       <th class="center">Descargar Toda la Informacion de los Cursos</th> <th class="center">{!!Html::link('files/curso-encarall','',['class' => 'glyphicon glyphicon-floppy-save', 'role' => 'button', 'aria-label' => 'Center Align'])!!}</th> 
 @endsection
 
       

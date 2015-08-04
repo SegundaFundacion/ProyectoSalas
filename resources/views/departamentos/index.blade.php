@@ -32,6 +32,7 @@
                                   <td>
                                         {!! Form::open(array('route' => array('departamentos.destroy', $departamento->id), 'method' => 'DELETE')) !!}
                                         <button class="btn btn-xs btn-danger">Eliminar</button>
+                                    
                                         {!! Form::close() !!}
                                   </td>
                               </tr>
@@ -43,7 +44,8 @@
               </div><!-- /row -->
               </section>
               </section>
-
+       
+<th class="center">Descargar Toda la Informacion de los Campus</th> <th class="center">{!!Html::link('files/departamentoall','',['class' => 'glyphicon glyphicon-floppy-save', 'role' => 'button', 'aria-label' => 'Center Align'])!!}</th>
 @endsection
 
       

@@ -37,14 +37,16 @@
                                   <td>
                                         {!! Form::open(array('route' => array('campus.destroy', $campu->id), 'method' => 'DELETE')) !!}
                                         <button class="btn btn-xs btn-danger">Eliminar</button>
-                                        <td>{!!Html::link('files/campus/'.$campu->id,'',['class' => 'btn glyphicon glyphicon-save', 'role' => 'button', 'aria-label' => 'Center Align'])!!}</td>
+                                        
                                         {!! Form::close() !!}
 
                                   </td>
                               </tr>
 
                               @endforeach
-                              <th class="center">{!!Html::link('files/campusall','',['class' => 'glyphicon glyphicon-floppy-save', 'role' => 'button', 'aria-label' => 'Center Align'])!!}</th>
+                                 
+                              
+                              </tr>
                               </tbody>
                           </table>
                       </div><!-- /content-panel -->
@@ -69,6 +71,6 @@
         
       </p>
 
-      
+    <th class="center">Descargar Toda la Informacion de los Campus</th> <th class="center">{!!Html::link('files/campusall','',['class' => 'glyphicon glyphicon-floppy-save', 'role' => 'button', 'aria-label' => 'Center Align'])!!}</th>  
 @endsection
 

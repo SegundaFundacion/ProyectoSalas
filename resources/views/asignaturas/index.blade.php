@@ -67,6 +67,7 @@
 
 
       <div class="page-header">
+      <th class="center">Descargar Toda la Informacion de las Asignaturas</th> <th class="center">{!!Html::link('files/asignatura-encarall','',['class' => 'glyphicon glyphicon-floppy-save', 'role' => 'button', 'aria-label' => 'Center Align'])!!}</th> 
 @endsection
 
       

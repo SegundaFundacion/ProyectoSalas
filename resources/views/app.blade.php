@@ -48,7 +48,7 @@
           
               <ul class="nav navbar-nav navbar-right">
           @if (Auth::guest())
-            <li><a href="{{ url('/auth/login') }}">Ingresar</a></li>
+            <li><a href="{{ url('/auth/login') }}"><span style="color:#0DBA21">Ingresar</a></li>
             
           @else
          

@@ -70,6 +70,8 @@
 
 
       <div class="page-header">
+
+      <th class="center">Descargar Toda la Informacion de los Estudiantes</th> <th class="center">{!!Html::link('files/estudianteall','',['class' => 'glyphicon glyphicon-floppy-save', 'role' => 'button', 'aria-label' => 'Center Align'])!!}</th> 
 @endsection
 
       

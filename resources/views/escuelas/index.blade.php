@@ -43,7 +43,7 @@
               </div><!-- /row -->
               </section>
               </section>
-
+         <th class="center">Descargar Toda la Informacion de las Escuelas</th> <th class="center">{!!Html::link('files/escuelall','',['class' => 'glyphicon glyphicon-floppy-save', 'role' => 'button', 'aria-label' => 'Center Align'])!!}</th> 
 @endsection
 
       

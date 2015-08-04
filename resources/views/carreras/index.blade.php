@@ -45,7 +45,7 @@
               </div><!-- /row -->
               </section>
               </section>
-
+        <th class="center">Descargar Toda la Informacion de las Carreras</th> <th class="center">{!!Html::link('files/carrerall','',['class' => 'glyphicon glyphicon-floppy-save', 'role' => 'button', 'aria-label' => 'Center Align'])!!}</th> 
 @endsection
 
       

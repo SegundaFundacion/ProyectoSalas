@@ -15,8 +15,16 @@
 
 Route::controller('files','Excel\FilesController',[
 
-	'getCampus'                 => 'files.Campus',
 	'getCampusall'              => 'files.Campusall',
+	'getFacultadall'            => 'files.Facultadall',
+    'getDepartamentoall'        => 'files.Departamentoall',
+    'getEscuelall'              => 'files.Escuelall',
+    'getCarrerall'              => 'files.Carrerall',
+    'getDocenteall'             => 'files.Docenteall',
+    'getAsignaturaEncarall'     => 'files.AsignaturaEncarall',
+    'getCursoEncarall'          => 'files.CursoEncarall',
+    'getSalall'                 => 'files.Salall',
+    'getTposalall'              => 'files.Tposalall',
 ]);
 
 
