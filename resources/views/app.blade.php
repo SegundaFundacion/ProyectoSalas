@@ -51,12 +51,8 @@
             <li><a href="{{ url('/auth/login') }}">Ingresar</a></li>
             
           @else
-          <ul class="nav navbar-nav">
-            <li><a href="/menuadmin">Administrador</a></li>
-            <li><a href="/menuencar">Encargado</a></li>
-            <li><a href="/menudocen">Docente</a></li>
-            <li><a href="/menuestudi">Estudiante</a></li>
-              </ul>
+         
+
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
@@ -88,4 +84,4 @@
 </body>
 </html>
 <br><br><br>
-<footer><p align="center"><span style="color:#80BFFF">© 2015 M&B Consultores. Todos los derechos reservados.</p></footer>
+<footer><p align="center"><span style="color:#1F1919">© 2015 M&B Consultores. Todos los derechos reservados.</p></footer>

@@ -78,10 +78,3 @@ Route::controller('auth', 'Auth\AuthController', [
 
 
 
-//Route::get('menuadmin', ['middleware' => ['auth','roladmin'],'as'=>'menuadministrador.index','uses'=> 'Backend\MenuAdministradorController@index']);
-//Route::get('menuencar', ['middleware' => ['auth', 'rolencargado'],'as'=>'menuencargado.index','uses'=> 'Backend\MenuEncargadoController@index']); 
-//Route::get('menudocen', ['middleware' => ['auth','roldocent'],'as'=>'menudocente.index','uses'=> 'Backend\MenuDocenteController@index']);
-//Route::get('menuestudi', 'Backend\MenuEstudianteController@index');
-//Route::get('menuadmin','Backend\MenuAdministradorController@index');
-
-

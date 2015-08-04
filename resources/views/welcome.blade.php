@@ -5,7 +5,7 @@
 <br><br><br>
 
 <div class="jumbotron">
-        <p> <CENTER> <strong>Bienvenido al sistema web "Gestion de Salas", por favor, logueese o regístrese si no tiene registro.</strong></CENTER> </p>
+        <p> <CENTER> <strong><h2>Bienvenido al sistema web "Gestion de Salas"<small><br>Ingrese al Sistema con su rut y clave de Dirdoc</small></h2></strong></CENTER> </p>
       </div>
 <section id="main-content">
           <section class="wrapper">
