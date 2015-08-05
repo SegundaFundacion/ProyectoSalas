@@ -63,7 +63,10 @@ Route::resource('estudiantes','Backend\EstudiantesController');
 Route::resource('roles','Backend\RolesController');
 Route::resource('rolesusuarios','Backend\RolesusuariosController');
 Route::resource('campus','Backend\CampusController');
-
+Route::resource('menuadmin', 'Backend\MenuAdministradorController');
+Route::resource('menuencar', 'Backend\MenuEncargadoController');
+Route::resource('menudocen', 'Backend\MenuDocenteController');
+Route::resource('menuestudi', 'Backend\MenuEstudianteController');
 
 
 
